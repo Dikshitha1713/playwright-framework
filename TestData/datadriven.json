@@ -1,0 +1,30 @@
+[
+    {
+       "url" : "https://rahulshettyacademy.com/client",
+        "username" : "dikshitha1713@gmail.com",
+        "password" : "Testing@123",
+        "productname" : "ADIDAS ORIGINAL",
+        "productprice" : "$ 11500"
+        
+        
+
+    },
+    {
+        "url" : "https://rahulshettyacademy.com/client",
+        "username" : "dikshitha1713@gmail.com",
+        "password" : "Testing@123",
+        "productname" : "ZARA COAT 3",
+        "productprice" : "$ 11500"
+
+     },
+    {
+        "url" : "https://rahulshettyacademy.com/client",
+        "username" : "dikshitha1713@gmail.com",
+        "password" : "Testing@123",
+        "productname" : "iphone 13 pro",
+        "productprice" : "$ 55500"
+
+    }
+  ]
+
+

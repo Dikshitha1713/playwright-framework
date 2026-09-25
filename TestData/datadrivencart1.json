@@ -1,0 +1,44 @@
+  {
+       "url" : "https://rahulshettyacademy.com/client",
+        "username" : "dikshitha1713@gmail.com",
+        "password" : "Testing@123" , 
+  
+    "actions" : [  
+                   {
+                     "action" : "add",
+                     "productname" : "ZARA COAT 3",
+                     "cartcount"  :"1"
+                   },
+                   {
+                     "action" : "cart",
+                     "productname" : "ZARA COAT 3"
+                   },
+                   {
+                     "action" : "delete"
+                   },
+                   {
+                     "action" : "continue"
+                   },
+                      {
+            "action": "add",
+            "productname": "ADIDAS ORIGINAL",
+            "cartcount": "1"
+                      },
+                     {
+            "action": "add",
+            "productname": "ZARA COAT 3",
+            "cartcount": "2"
+                     },
+                      {
+            "action": "cart"
+        
+                     },
+                   {
+            "action": "checkout"
+                   }
+
+    ]
+
+}
+    
+  

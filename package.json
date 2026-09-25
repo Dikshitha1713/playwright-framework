@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Test.js",
+  "scripts": {
+    "test:prod": "set ENV=prod&& npx playwright test",
+    "test:smoketest": "npx playwright test -g @smoke",
+    "test:regression": "npx playwright test -g @regression",
+    "test:smokeandregression": "npx playwright test --grep (?.*smoke)|(?.*regression)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.12.2",
+    "dotenv": "^18.0.3",
+    "xlsx": "^0.18.5"
+  }
+}
