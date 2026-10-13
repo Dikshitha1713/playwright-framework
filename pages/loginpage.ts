@@ -1,3 +1,6 @@
+// page file --- locators n methods(actions)
+
+
 import type { Locator, Page } from "@playwright/test";
 
 export class loginpage{

@@ -1,0 +1,18 @@
+tabletext [
+  'BookName\tAuthor\tSubject\tPrice\n' +
+    'Learn Selenium\tAmit\tSelenium\t300\n' +
+    'Learn Java\tMukesh\tJava\t500\n' +
+    'Learn JS\tAnimesh\tJavascript\t300\n' +
+    'Master In Selenium\tMukesh\tSelenium\t3000\n' +
+    'Master In Java\tAmod\tJAVA\t2000\n' +
+    'Master In JS\tAmit\tJavascript\t1000'
+]
+rows [
+  '\n    BookName\n    Author\n    Subject\n    Price\n  ',
+  '\n    Learn Selenium\n    Amit\n    Selenium\n    300\n  ',
+  '\n    Learn Java\n    Mukesh\n    Java\n    500\n  ',
+  '\n    Learn JS\n    Animesh\n    Javascript\n    300\n  ',
+  '\n    Master In Selenium\n    Mukesh\n    Selenium\n    3000\n  ',
+  '\n    Master In Java\n    Amod\n    JAVA\n    2000\n  ',
+  '\n    Master In JS\n    Amit\n    Javascript\n    1000\n  '
+]

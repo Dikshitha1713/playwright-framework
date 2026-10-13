@@ -1,0 +1,730 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: orangehome.spec.ts >> homepage validation
+- Location: tests\orangehome.spec.ts:19:1
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator:  locator('[id="oxd-toaster_1"]')
+Expected: visible
+Received: hidden
+Timeout:  5000ms
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for locator('[id="oxd-toaster_1"]')
+    12 × locator resolved to <div id="oxd-toaster_1" class="oxd-toast-container oxd-toast-container--bottom"></div>
+       - unexpected value "hidden"
+
+```
+
+```yaml
+- complementary:
+  - navigation "Sidepanel":
+    - link "client brand banner":
+      - /url: https://www.orangehrm.com/
+      - img "client brand banner"
+    - textbox "Search"
+    - button ""
+    - separator
+    - list:
+      - listitem:
+        - link "Admin":
+          - /url: /web/index.php/admin/viewAdminModule
+      - listitem:
+        - link "PIM":
+          - /url: /web/index.php/pim/viewPimModule
+      - listitem:
+        - link "Leave":
+          - /url: /web/index.php/leave/viewLeaveModule
+      - listitem:
+        - link "Time":
+          - /url: /web/index.php/time/viewTimeModule
+      - listitem:
+        - link "Recruitment":
+          - /url: /web/index.php/recruitment/viewRecruitmentModule
+      - listitem:
+        - link "My Info":
+          - /url: /web/index.php/pim/viewMyDetails
+      - listitem:
+        - link "Performance":
+          - /url: /web/index.php/performance/viewPerformanceModule
+      - listitem:
+        - link "Dashboard":
+          - /url: /web/index.php/dashboard/index
+      - listitem:
+        - link "Directory":
+          - /url: /web/index.php/directory/viewDirectory
+      - listitem:
+        - link "Maintenance":
+          - /url: /web/index.php/maintenance/viewMaintenanceModule
+      - listitem:
+        - link "Claim":
+          - /url: /web/index.php/claim/viewClaimModule
+          - img
+          - text: Claim
+      - listitem:
+        - link "Buzz":
+          - /url: /web/index.php/buzz/viewBuzz
+- banner:
+  - heading "Admin" [level=6]
+  - heading "/ User Management" [level=6]
+  - link "Upgrade":
+    - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+    - button "Upgrade"
+  - list:
+    - listitem:
+      - img "profile picture"
+      - paragraph: Bilol User_DAXLFcMX
+      - text: 
+  - navigation "Topbar Menu":
+    - list:
+      - listitem: User Management 
+      - listitem: Job 
+      - listitem: Organization 
+      - listitem: Qualifications 
+      - listitem:
+        - link "Nationalities":
+          - /url: "#"
+      - listitem:
+        - link "Corporate Branding":
+          - /url: "#"
+      - listitem: Configuration 
+      - button ""
+- heading "System Users" [level=5]
+- button ""
+- separator
+- text: Username
+- textbox: diksha
+- text: User Role Admin  Employee Name
+- textbox "Type for hints...": bilo
+- text: Invalid Status Enabled 
+- separator
+- button "Reset"
+- button "Search"
+- button " Add"
+- separator
+- text: (57) Records Found
+- table:
+  - rowgroup:
+    - row " Username  User Role  Employee Name  Status  Actions":
+      - columnheader "":
+        - checkbox ""
+        - text: 
+      - columnheader "Username "
+      - columnheader "User Role "
+      - columnheader "Employee Name "
+      - columnheader "Status "
+      - columnheader "Actions"
+  - rowgroup:
+    - row " abcd_20261009132938742 Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abcd_20261009132938742"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abcd_20261009134021829 Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abcd_20261009134021829"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abcd_CWacAXJW Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abcd_CWacAXJW"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abcd_DGbGQUST Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abcd_DGbGQUST"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abcd_EJLVVKXI Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abcd_EJLVVKXI"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abcd_FEFYBcIQ Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abcd_FEFYBcIQ"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_BBIZKNFJ Admin Orange Test Disabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_BBIZKNFJ"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Disabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_BOSLeMOX Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_BOSLeMOX"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_BXHFXGMN Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_BXHFXGMN"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_CHVaHXNI Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_CHVaHXNI"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_DdSCcVAL Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_DdSCcVAL"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_DQOELEWF Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_DQOELEWF"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_FCPWGZOY Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_FCPWGZOY"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_GNNVPBEF Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_GNNVPBEF"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_GTQLIAdI Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_GTQLIAdI"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_HAZJNAKJ Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_HAZJNAKJ"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_HEbCLSeV Admin Orange Test Disabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_HEbCLSeV"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Disabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_HECSFMfY Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_HECSFMfY"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_HSSLFBBA Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_HSSLFBBA"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " abc_KYACMKHV Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "abc_KYACMKHV"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " Admin Admin Bilol User_DAXLFcMX Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "Admin"
+      - cell "Admin"
+      - cell "Bilol User_DAXLFcMX"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " Areeba Malik ESS Areeba Malik Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "Areeba Malik"
+      - cell "ESS"
+      - cell "Areeba Malik"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " autoUser_CdPEVCVa Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "autoUser_CdPEVCVa"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " autoUser_HTTbLTdA Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "autoUser_HTTbLTdA"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " basacarahbha Admin bala ravi Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "basacarahbha"
+      - cell "Admin"
+      - cell "bala ravi"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " BLVTNEAb Admin Berthold BeefsteakLN_CeCER Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "BLVTNEAb"
+      - cell "Admin"
+      - cell "Berthold BeefsteakLN_CeCER"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " CaOdeEGD ESS Linda AndersonLN_DHBNO Disabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "CaOdeEGD"
+      - cell "ESS"
+      - cell "Linda AndersonLN_DHBNO"
+      - cell "Disabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " CCOeaEOY ESS Reinhard PathfinderLN_DJZBR Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "CCOeaEOY"
+      - cell "ESS"
+      - cell "Reinhard PathfinderLN_DJZBR"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " DCFZOJde Admin Berthold BeefsteakLN_DJAbe Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "DCFZOJde"
+      - cell "Admin"
+      - cell "Berthold BeefsteakLN_DJAbe"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " Demo12 Admin AutoTest AgentRun7391 Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "Demo12"
+      - cell "Admin"
+      - cell "AutoTest AgentRun7391"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " DNPOQYPX ESS Doremon Nobita XukaLN_FZPPG Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "DNPOQYPX"
+      - cell "ESS"
+      - cell "Doremon Nobita XukaLN_FZPPG"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " DVAVQXUA ESS Linda AndersonLN_DfDDK Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "DVAVQXUA"
+      - cell "ESS"
+      - cell "Linda AndersonLN_DfDDK"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " EcfGDfOf Admin Linda AndersonLN_BVWMS Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "EcfGDfOf"
+      - cell "Admin"
+      - cell "Linda AndersonLN_BVWMS"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " EDaMXFGe Admin Berthold BeefsteakLN_PEZMZ Disabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "EDaMXFGe"
+      - cell "Admin"
+      - cell "Berthold BeefsteakLN_PEZMZ"
+      - cell "Disabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " EEfMSTdC ESS Linda AndersonLN_FYKfW Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "EEfMSTdC"
+      - cell "ESS"
+      - cell "Linda AndersonLN_FYKfW"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " ELETBJVP Admin Linda AndersonLN_DPPGO Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "ELETBJVP"
+      - cell "Admin"
+      - cell "Linda AndersonLN_DPPGO"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " eNBHNSSY ESS Linda AndersonLN_BDJEf Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "eNBHNSSY"
+      - cell "ESS"
+      - cell "Linda AndersonLN_BDJEf"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " EYVKMeGc ESS Yuki NakamuraLN_EFJZB Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "EYVKMeGc"
+      - cell "ESS"
+      - cell "Yuki NakamuraLN_EFJZB"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " FGETeYad Admin Berthold BeefsteakLN_CZVZc Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "FGETeYad"
+      - cell "Admin"
+      - cell "Berthold BeefsteakLN_CZVZc"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " FJeCHLKU Admin Linda AndersonLN_HERHN Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "FJeCHLKU"
+      - cell "Admin"
+      - cell "Linda AndersonLN_HERHN"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " FMLName ESS Qwerty LName Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "FMLName"
+      - cell "ESS"
+      - cell "Qwerty LName"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " FMLName1 ESS FName LName Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "FMLName1"
+      - cell "ESS"
+      - cell "FName LName"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " HeHeHe Helicote DBURDYGL Admin Wolfgang SchneiderLN_CdSDH Disabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "HeHeHe Helicote DBURDYGL"
+      - cell "Admin"
+      - cell "Wolfgang SchneiderLN_CdSDH"
+      - cell "Disabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " HEWNSScb Admin Alexandre AndersonLN_DEOeD Disabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "HEWNSScb"
+      - cell "Admin"
+      - cell "Alexandre AndersonLN_DEOeD"
+      - cell "Disabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " HKSfHGCD ESS Admin_GEMPWLMZ User_dMJXWdOe Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "HKSfHGCD"
+      - cell "ESS"
+      - cell "Admin_GEMPWLMZ User_dMJXWdOe"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " HLVSAGZA Admin Linda AndersonLN_CVIRE Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "HLVSAGZA"
+      - cell "Admin"
+      - cell "Linda AndersonLN_CVIRE"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " IJfTVMLd Admin Berthold BeefsteakLN_NUfUW Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "IJfTVMLd"
+      - cell "Admin"
+      - cell "Berthold BeefsteakLN_NUfUW"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " Jobinsam@6742 ESS Jobin Sam Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "Jobinsam@6742"
+      - cell "ESS"
+      - cell "Jobin Sam"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " K8mX2vQ9nL4pT7rY1cD6wH3jF5sU8eB_CBEJUSZV Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "K8mX2vQ9nL4pT7rY1cD6wH3jF5sU8eB_CBEJUSZV"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+    - row " K8mX2vQ9nL4pT7rY1cD6wH3jF5sU8eB_HEONWQFS Admin Orange Test Enabled  ":
+      - cell "":
+        - checkbox ""
+        - text: 
+      - cell "K8mX2vQ9nL4pT7rY1cD6wH3jF5sU8eB_HEONWQFS"
+      - cell "Admin"
+      - cell "Orange Test"
+      - cell "Enabled"
+      - cell " ":
+        - button ""
+        - button ""
+- navigation "Pagination Navigation":
+  - list:
+    - listitem:
+      - button "1"
+    - listitem:
+      - button "2"
+    - listitem:
+      - button ""
+- paragraph: OrangeHRM OS 5.9
+- paragraph:
+  - text: © 2005 - 2026
+  - link "OrangeHRM, Inc":
+    - /url: http://www.orangehrm.com
+  - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+  1  | import{test,expect} from '@playwright/test'
+  2  | import { orangeloginpage } from '../pages/orangeloginpage.js'
+  3  | import { orangehomepage } from '../pages/orangehomepage.js'
+  4  | 
+  5  | import data from '../TestData/orangedata.json' with {type: 'json'}
+  6  | 
+  7  | let orgloginpage: orangeloginpage
+  8  | let orghomepage: orangehomepage
+  9  | 
+  10 | test.beforeEach(async ({page}) =>{
+  11 |      orgloginpage = new orangeloginpage (page)
+  12 |      orghomepage  = new orangehomepage (page)
+  13 | 
+  14 |     await orgloginpage.launchurl(data.url)
+  15 |     await orgloginpage.orglogintoapp(data.loginusername,data.loginpassword)
+  16 | })
+  17 | 
+  18 | 
+  19 | test("homepage validation", async ({page}) =>{
+  20 |    await orghomepage.tapserachbox(data.searchterm)
+  21 | 
+  22 | 
+  23 |    await expect(orghomepage.headingtext).toBeVisible()
+  24 |    await orghomepage.updatesystemuser(data.filterusername, 
+  25 |     data.rolename,data.empname,data.employeename,data.statusname)
+  26 | 
+  27 |    await expect(orghomepage.enabledtext).toHaveText("Enabled")
+> 28 |    await expect(orghomepage.info).toBeVisible()
+     |                                   ^ Error: expect(locator).toBeVisible() failed
+  29 | 
+  30 |    
+  31 | })
+```

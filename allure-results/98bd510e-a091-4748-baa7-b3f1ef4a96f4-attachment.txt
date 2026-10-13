@@ -1,0 +1,21 @@
+tabletext [
+  'BookName\tAuthor\tSubject\tPrice\n' +
+    'Learn Selenium\tAmit\tSelenium\t300\n' +
+    'Learn Java\tMukesh\tJava\t500\n' +
+    'Learn JS\tAnimesh\tJavascript\t300\n' +
+    'Master In Selenium\tMukesh\tSelenium\t3000\n' +
+    'Master In Java\tAmod\tJAVA\t2000\n' +
+    'Master In JS\tAmit\tJavascript\t1000'
+]
+7
+all 2ndrow text [ 'Learn Java', 'Mukesh', 'Java', '500' ]
+Learn Java
+Mukesh
+Java
+500
+[ 'Learn Selenium', 'Amit', 'Selenium', '300' ]
+[ 'Learn Java', 'Mukesh', 'Java', '500' ]
+[ 'Learn JS', 'Animesh', 'Javascript', '300' ]
+[ 'Master In Selenium', 'Mukesh', 'Selenium', '3000' ]
+[ 'Master In Java', 'Amod', 'JAVA', '2000' ]
+[ 'Master In JS', 'Amit', 'Javascript', '1000' ]

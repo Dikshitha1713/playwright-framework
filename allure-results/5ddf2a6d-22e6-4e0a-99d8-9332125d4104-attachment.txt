@@ -1,0 +1,13 @@
+[
+  'Red',   'Blue',
+  'Green', 'Yellow',
+  'Red',   'White',
+  'Green'
+]
+Red
+Blue
+Green
+Yellow
+Red
+White
+Green

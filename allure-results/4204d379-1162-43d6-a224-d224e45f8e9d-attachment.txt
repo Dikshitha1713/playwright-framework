@@ -1,0 +1,7 @@
+[
+  'Cat',      'Cheetah',
+  'Deer',     'Dog',
+  'Elephant', 'Fox',
+  'Giraffe',  'Lion',
+  'Rabbit',   'Zebra'
+]

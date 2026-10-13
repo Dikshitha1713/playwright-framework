@@ -3,7 +3,8 @@ test("shadow handling", async ({page})=>{
     await page.goto("https://playwrightlab.github.io/")
 
     await page.getByText("Menu ▾").hover()
-    await page.getByText("Shadow DOM", {exact:true}).first().click()
+    //await page.getByText("Shadow DOM", {exact:true}).first().click()
+    await page.getByTestId("nav-shadow").click()
 
     await page.getByRole("heading", {name:" Shadow DOM Elements"}).scrollIntoViewIfNeeded()
     await page.locator("#shadowInput").fill("practice shawdow dom")

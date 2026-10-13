@@ -12,14 +12,33 @@ const __dirname = path.dirname(__filename)
 const filepath = path.join(__dirname, "../TestData/pwexcel.xlsx")
 const sheetname = "Sheet1"
 
-let products
-try{
-  const products = ExcelUtisls.getexceldata(filepath,sheetname)
-  //console.log(products)
-  //console.log(Object.keys(products[0]))
+type ProductTestData = {
+  url: string;
+  username: string;
+  password: string;
+  productname: string;
+  productprice: string;
+};
+
+let products: ProductTestData[];
+// try{
+//   const products = ExcelUtisls.getexceldata(filepath,sheetname)
+//   //console.log(products)
+//   //console.log(Object.keys(products[0]))
+// }
+// catch(error){
+//   console.log(error)
+// }
+
+try {
+  products = ExcelUtisls.getexceldata(filepath, sheetname) as ProductTestData[];
+} catch (error) {
+  console.error("Failed to read Excel data:", error);
+  throw error;
 }
-catch(error){
-  console.log(error)
+
+if (products.length === 0) {
+  throw new Error("No test data found in the Excel sheet");
 }
 
 let Loginpage : loginpage

@@ -1,0 +1,28 @@
+[
+
+
+{
+    "url" : "https://sauce-demo.myshopify.com/",
+    "email" : "dikshitha1713@gmail.com",
+    "password" : "sauce123",
+    "prdname"  : "Grey jacket",
+    "prodprice" : "£55.00 "
+},
+{
+    "url" : "https://sauce-demo.myshopify.com/",
+    "email" : "dikshitha1713@gmail.com",
+    "password" : "sauce123",
+    "prdname"  : "Noir jacket",
+    "prodprice" :"£60.00 "
+},
+{
+    
+    "url" : "https://sauce-demo.myshopify.com/",
+    "email" : "dikshitha1713@gmail.com",
+    "password" : "sauce123",
+    "prdname"  : "Striped top",
+    "prodprice" :"£50.00 "
+}
+
+
+]

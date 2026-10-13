@@ -1,0 +1,12 @@
+original list [
+  'Blue',   'Green',
+  'Green',  'Red',
+  'Red',    'White',
+  'Yellow'
+]
+sorted list [
+  'Blue',   'Green',
+  'Green',  'Red',
+  'Red',    'White',
+  'Yellow'
+]

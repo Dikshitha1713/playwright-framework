@@ -42,5 +42,36 @@ test("test6", async() =>{
 
 })
 
+test('Login', async ({ page }) => {
 
+    console.log("Starting Login test");
+
+    await page.getByLabel('Username').fill('testuser');
+
+    console.log("Username entered");
+});
+
+
+
+test.only('Verify cookie consent', async ({ context, page }) => {
+  await context.addCookies([
+    {
+      name: 'cookieConsent',
+      value: 'accepted',
+      domain: 'example.com',
+      path: '/',
+    },
+  ]);
+
+  await page.goto('https://www.flipkart.com/');
+
+  const cookies = await context.cookies();
+  const consent = cookies.find(
+    cookie => cookie.name === 'cookieConsent'
+  );
+
+  expect(consent?.value).toBe('accepted');
+
+  await context.clearCookies();
+});
 

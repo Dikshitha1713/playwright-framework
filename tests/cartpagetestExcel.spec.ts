@@ -15,12 +15,32 @@ const __dirname = path.dirname(__filename)
 const filepath = path.join(__dirname, '../TestData/pwexcel.xlsx')
 const sheetname = "cartpage"
 
-let items
-try{
-   items = ExcelUtisls.getexceldata(filepath, sheetname)
-}
-catch(error){
-  console.log(error)
+// let items
+// try{
+//    items = ExcelUtisls.getexceldata(filepath, sheetname)
+// }
+// catch(error){
+//   console.log(error)
+// }
+
+
+type CartTestData = {
+  url: string;
+  username: string;
+  password: string;
+  productname: string;
+  ordernumber: string;
+  finalproductprice: string;
+  totalamt: string;
+};
+
+let items: CartTestData[];
+
+try {
+  items = ExcelUtisls.getexceldata(filepath, sheetname) as CartTestData[];
+} catch (error) {
+  console.error("Failed to read Excel data:", error);
+  throw error;
 }
 
 let Loginpage : loginpage

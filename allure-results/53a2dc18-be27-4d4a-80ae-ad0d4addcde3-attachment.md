@@ -1,0 +1,1683 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ShadowDom.spec.ts >> shadow handling
+- Location: testing\ShadowDom.spec.ts:2:1
+
+# Error details
+
+```
+Test timeout of 120000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 120000ms exceeded.
+Call log:
+  - waiting for getByText('Shadow DOM', { exact: true }).first()
+    - locator resolved to <a href="#shadow" data-testid="nav-shadow">Shadow DOM</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    199 × waiting for element to be visible, enabled and stable
+        - element is not visible
+      - retrying click action
+        - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "PlayLab Play Lab" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "PlayLab" [ref=e5]
+        - text: Play
+        - generic [ref=e6]: Lab
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Locators" [ref=e9] [cursor=pointer]:
+            - /url: locators.html
+        - listitem [ref=e10]:
+          - link "Menu ▾" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+      - link "Login" [ref=e13] [cursor=pointer]:
+        - /url: login.html
+      - button "Toggle theme" [ref=e14] [cursor=pointer]
+  - generic [ref=e20]:
+    - generic [ref=e21]: Your Automation Playground
+    - heading "Master Playwright Test Automation" [level=1] [ref=e25]: Master PlaywrightTest Automation
+    - paragraph [ref=e26]: A beautifully crafted practice arena with every UI pattern you need to become a Playwright expert. Forms, tables, modals, drag & drop, shadow DOM, iframes, and much more.
+    - button [ref=e28] [cursor=pointer]
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: "19"
+        - generic [ref=e35]: Sections
+      - generic [ref=e36]:
+        - generic [ref=e37]: "200"
+        - generic [ref=e38]: Elements
+      - generic [ref=e39]:
+        - generic [ref=e40]: "65"
+        - generic [ref=e41]: Patterns
+  - generic "Advertisement" [ref=e42]:
+    - iframe [ref=e45]:
+      - iframe [ref=f1e2]:
+        - link [ref=f12e3] [cursor=pointer]:
+          - /url: https://clicks.pipaffiliates.com/c?c=873073&l=en&p=0
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - generic [ref=e49]: "01"
+      - heading "Form Elements" [level=2] [ref=e50]
+      - paragraph [ref=e51]: Practice with every type of form input, validation, and interaction pattern.
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - heading [level=3] [ref=e55]
+          - generic [ref=e59]: Validation
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]: Full Name *
+            - textbox "Full Name *" [ref=e63]:
+              - /placeholder: John Doe
+          - generic [ref=e65]:
+            - generic [ref=e66]: Email Address *
+            - textbox "Email Address *" [ref=e67]:
+              - /placeholder: john@example.com
+          - generic [ref=e69]:
+            - generic [ref=e70]: Password *
+            - generic [ref=e71]:
+              - textbox "Password *" [ref=e72]:
+                - /placeholder: Min 8 characters
+              - button "Toggle password visibility" [ref=e73] [cursor=pointer]
+          - generic [ref=e80]:
+            - generic [ref=e81]: Phone Number
+            - textbox "Phone Number" [ref=e82]:
+              - /placeholder: +1 (555) 000-0000
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - generic [ref=e85]: Date of Birth
+              - textbox "Date of Birth" [ref=e86]
+            - generic [ref=e87]:
+              - generic [ref=e88]: Country
+              - combobox "Country" [ref=e89]:
+                - option "Select country..." [selected]
+                - option "United States"
+                - option "United Kingdom"
+                - option "Canada"
+                - option "Australia"
+                - option "Germany"
+                - option "France"
+                - option "Japan"
+                - option "India"
+                - option "Brazil"
+          - generic [ref=e90]:
+            - generic [ref=e91]: Gender
+            - generic [ref=e92]:
+              - generic [ref=e93] [cursor=pointer]:
+                - radio "Male" [ref=e94]
+                - text: Male
+              - generic [ref=e95] [cursor=pointer]:
+                - radio "Female" [ref=e96]
+                - text: Female
+              - generic [ref=e97] [cursor=pointer]:
+                - radio "Other" [ref=e98]
+                - text: Other
+          - generic [ref=e99]:
+            - generic [ref=e100]: Skills
+            - generic [ref=e101]:
+              - generic [ref=e102] [cursor=pointer]:
+                - checkbox "JavaScript" [ref=e103]
+                - text: JavaScript
+              - generic [ref=e104] [cursor=pointer]:
+                - checkbox "Python" [ref=e105]
+                - text: Python
+              - generic [ref=e106] [cursor=pointer]:
+                - checkbox "Java" [ref=e107]
+                - text: Java
+              - generic [ref=e108] [cursor=pointer]:
+                - checkbox "C#" [ref=e109]
+                - text: C#
+          - generic [ref=e110]:
+            - generic [ref=e111]: Bio
+            - textbox "Bio" [ref=e112]:
+              - /placeholder: Tell us about yourself...
+            - generic [ref=e113]: 0/200
+          - generic [ref=e115] [cursor=pointer]:
+            - checkbox "I agree to the Terms & Conditions" [ref=e116]
+            - text: I agree to the
+            - link "Terms & Conditions" [ref=e117]:
+              - /url: terms.html
+          - generic [ref=e119]:
+            - button "Register" [ref=e120] [cursor=pointer]
+            - button "Reset" [ref=e121] [cursor=pointer]
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading [level=3] [ref=e125]
+            - generic [ref=e129]: Input
+          - generic [ref=e130]:
+            - generic [ref=e131]: "Volume: 50%"
+            - 'slider "Volume: 50%" [ref=e132]': "50"
+          - generic [ref=e133]:
+            - generic [ref=e134]: "Price Range: $500"
+            - 'slider "Price Range: $500" [ref=e135]': "500"
+          - generic [ref=e136]:
+            - generic [ref=e137]: Favorite Color
+            - textbox "Favorite Color" [ref=e138] [cursor=pointer]: "#6366f1"
+            - text: "#6366f1"
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - heading [level=3] [ref=e141]
+            - generic [ref=e145]: Upload
+          - generic [ref=e146] [cursor=pointer]:
+            - paragraph [ref=e151]: Drag & drop files here or browse
+            - generic [ref=e152]: "Supports: Images, PDF, DOC (Max 5MB)"
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - heading [level=3] [ref=e155]
+            - generic [ref=e159]: No DOM
+          - generic [ref=e160]:
+            - generic [ref=e161]: Search Programming Languages
+            - textbox "Search Programming Languages" [ref=e162]:
+              - /placeholder: Type to search...
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - heading [level=3] [ref=e165]
+            - generic [ref=e169]: Select
+          - generic [ref=e170]:
+            - generic [ref=e171]: Select Frameworks
+            - listbox "Select Frameworks" [ref=e172]:
+              - option "React" [ref=e173]
+              - option "Vue.js" [ref=e174]
+              - option "Angular" [ref=e175]
+              - option "Svelte" [ref=e176]
+              - option "Next.js" [ref=e177]
+              - option "Nuxt.js" [ref=e178]
+              - option "Remix" [ref=e179]
+              - option "Astro" [ref=e180]
+            - paragraph [ref=e181]: Hold Ctrl/Cmd to select multiple
+    - generic [ref=e183]:
+      - heading [level=3] [ref=e184]
+      - paragraph [ref=e189]: Different dropdown patterns for comprehensive automation practice.
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - heading [level=3] [ref=e193]
+          - generic [ref=e197]: Click
+        - generic [ref=e198]:
+          - generic [ref=e199]: Select Priority
+          - button "Choose priority..." [ref=e201] [cursor=pointer]
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - heading [level=3] [ref=e209]
+          - generic [ref=e213]: Filter
+        - generic [ref=e214]:
+          - generic [ref=e215]: Select City
+          - textbox "Type to filter cities..." [ref=e217]
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - heading [level=3] [ref=e221]
+          - generic [ref=e225]: OptGroup
+        - generic [ref=e226]:
+          - generic [ref=e227]: Select a Vehicle
+          - combobox "Select a Vehicle" [ref=e228]:
+            - option "Choose vehicle..." [selected]
+            - option "Sedan"
+            - option "SUV"
+            - option "Hatchback"
+            - option "Coupe"
+            - option "Pickup"
+            - option "Semi Truck"
+            - option "Motorcycle"
+            - option "Scooter"
+            - option "Bicycle"
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - heading [level=3] [ref=e232]
+          - generic [ref=e238]: Dependent
+        - generic [ref=e239]:
+          - generic [ref=e240]: Continent
+          - combobox "Continent" [ref=e241]:
+            - option "Select continent..." [selected]
+            - option "Asia"
+            - option "Europe"
+            - option "Americas"
+        - generic [ref=e242]:
+          - generic [ref=e243]: Country
+          - combobox "Country" [disabled] [ref=e244]:
+            - option "Select continent first..." [selected]
+        - generic [ref=e245]:
+          - generic [ref=e246]: City
+          - combobox "City" [disabled] [ref=e247]:
+            - option "Select country first..." [selected]
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - heading [level=3] [ref=e251]
+          - generic [ref=e255]: Multi
+        - generic [ref=e256]:
+          - generic [ref=e257]: Select Toppings
+          - button "Select toppings..." [ref=e259] [cursor=pointer]
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - heading [level=3] [ref=e267]
+          - generic [ref=e271]: States
+        - generic [ref=e272]:
+          - generic [ref=e273]: Select Plan
+          - combobox "Select Plan" [ref=e274]:
+            - option "Choose a plan..." [selected]
+            - option "Free"
+            - option "Starter — $9/mo"
+            - option "Pro — $29/mo (Sold Out)" [disabled]
+            - option "Enterprise — $99/mo"
+            - option "Custom — Contact Us (Coming Soon)" [disabled]
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - heading [level=3] [ref=e278]
+          - generic [ref=e282]: No DOM
+        - generic [ref=e283]:
+          - paragraph [ref=e284]: Options disappear from DOM when element loses focus. Enable "Emulate a focused page" in DevTools to inspect.
+          - generic [ref=e285]: Job Title
+          - generic [ref=e286]: "-- Select --"
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - heading [level=3] [ref=e296]
+          - generic [ref=e300]: Async
+        - generic [ref=e301]:
+          - paragraph [ref=e302]: Click to load options after a 2-second delay (simulates API fetch).
+          - button "Load Options" [ref=e303] [cursor=pointer]
+        - generic [ref=e304]:
+          - generic [ref=e305]: Select Category
+          - combobox "Select Category" [disabled] [ref=e306]:
+            - option "Click button to load..." [selected]
+  - generic [ref=e309]:
+    - generic [ref=e310]:
+      - generic [ref=e311]: "02"
+      - heading "Data Tables" [level=2] [ref=e312]
+      - paragraph [ref=e313]: Sortable, filterable, and paginated data tables for comprehensive testing.
+    - generic [ref=e314]:
+      - generic [ref=e315]:
+        - heading [level=3] [ref=e316]
+        - generic [ref=e320]:
+          - textbox "Search users..." [ref=e321]
+          - combobox [ref=e322]:
+            - option "5 per page" [selected]
+            - option "10 per page"
+            - option "15 per page"
+          - combobox [ref=e323]:
+            - option "All Roles" [selected]
+            - option "Admin"
+            - option "Editor"
+            - option "Viewer"
+          - button "+ Add User" [ref=e324] [cursor=pointer]
+      - table [ref=e326]:
+        - rowgroup [ref=e327]:
+          - row [ref=e328]:
+            - columnheader [ref=e329]:
+              - checkbox [ref=e330] [cursor=pointer]
+            - columnheader "ID ↕" [ref=e331] [cursor=pointer]
+            - columnheader "Name ↕" [ref=e332] [cursor=pointer]
+            - columnheader "Email ↕" [ref=e333] [cursor=pointer]
+            - columnheader "Role" [ref=e334]
+            - columnheader "Status ↕" [ref=e335] [cursor=pointer]
+            - columnheader "Actions" [ref=e336]
+        - rowgroup [ref=e337]:
+          - row [ref=e338]:
+            - cell [ref=e339]:
+              - checkbox [ref=e340] [cursor=pointer]
+            - cell "1" [ref=e341]
+            - cell "Alice Johnson" [ref=e342]
+            - cell "alice@example.com" [ref=e343]
+            - cell "admin" [ref=e344]
+            - cell "active" [ref=e346]
+            - cell [ref=e348]:
+              - button "Edit" [ref=e349] [cursor=pointer]
+              - button "Delete" [ref=e353] [cursor=pointer]
+          - row [ref=e357]:
+            - cell [ref=e358]:
+              - checkbox [ref=e359] [cursor=pointer]
+            - cell "2" [ref=e360]
+            - cell "Bob Smith" [ref=e361]
+            - cell "bob@example.com" [ref=e362]
+            - cell "editor" [ref=e363]
+            - cell "active" [ref=e365]
+            - cell [ref=e367]:
+              - button "Edit" [ref=e368] [cursor=pointer]
+              - button "Delete" [ref=e372] [cursor=pointer]
+          - row [ref=e376]:
+            - cell [ref=e377]:
+              - checkbox [ref=e378] [cursor=pointer]
+            - cell "3" [ref=e379]
+            - cell "Charlie Brown" [ref=e380]
+            - cell "charlie@example.com" [ref=e381]
+            - cell "viewer" [ref=e382]
+            - cell "inactive" [ref=e384]
+            - cell [ref=e386]:
+              - button "Edit" [ref=e387] [cursor=pointer]
+              - button "Delete" [ref=e391] [cursor=pointer]
+          - row [ref=e395]:
+            - cell [ref=e396]:
+              - checkbox [ref=e397] [cursor=pointer]
+            - cell "4" [ref=e398]
+            - cell "Diana Prince" [ref=e399]
+            - cell "diana@example.com" [ref=e400]
+            - cell "admin" [ref=e401]
+            - cell "active" [ref=e403]
+            - cell [ref=e405]:
+              - button "Edit" [ref=e406] [cursor=pointer]
+              - button "Delete" [ref=e410] [cursor=pointer]
+          - row [ref=e414]:
+            - cell [ref=e415]:
+              - checkbox [ref=e416] [cursor=pointer]
+            - cell "5" [ref=e417]
+            - cell "Ethan Hunt" [ref=e418]
+            - cell "ethan@example.com" [ref=e419]
+            - cell "editor" [ref=e420]
+            - cell "pending" [ref=e422]
+            - cell [ref=e424]:
+              - button "Edit" [ref=e425] [cursor=pointer]
+              - button "Delete" [ref=e429] [cursor=pointer]
+      - generic [ref=e433]:
+        - generic [ref=e434]: Showing 1-5 of 15 entries
+        - generic [ref=e435]:
+          - button [disabled]
+          - button "1" [ref=e436] [cursor=pointer]
+          - button "2" [ref=e437] [cursor=pointer]
+          - button "3" [ref=e438] [cursor=pointer]
+          - button [ref=e439] [cursor=pointer]
+    - generic [ref=e443]:
+      - generic [ref=e444]:
+        - heading [level=3] [ref=e445]
+        - generic [ref=e449]: Editable
+      - table [ref=e451]:
+        - rowgroup [ref=e452]:
+          - row [ref=e453]:
+            - columnheader "Product" [ref=e454]
+            - columnheader "Price" [ref=e455]
+            - columnheader "Quantity" [ref=e456]
+            - columnheader "Total" [ref=e457]
+        - rowgroup [ref=e458]:
+          - row [ref=e459]:
+            - cell "MacBook Pro" [ref=e460]
+            - cell "2499" [ref=e461]
+            - cell "1" [ref=e462]
+            - cell "$2,499" [ref=e463]
+          - row [ref=e464]:
+            - cell "iPhone 15 Pro" [ref=e465]
+            - cell "1199" [ref=e466]
+            - cell "2" [ref=e467]
+            - cell "$2,398" [ref=e468]
+          - row [ref=e469]:
+            - cell "AirPods Max" [ref=e470]
+            - cell "549" [ref=e471]
+            - cell "1" [ref=e472]
+            - cell "$549" [ref=e473]
+        - rowgroup [ref=e474]:
+          - row [ref=e475]:
+            - cell "Grand Total:" [ref=e476]
+            - cell "$5,446" [ref=e477]
+    - generic [ref=e478]:
+      - generic [ref=e479]:
+        - heading [level=3] [ref=e480]
+        - generic [ref=e484]: Randomized
+      - paragraph [ref=e485]: Columns and rows change position on every page reload. Cell values are random.
+      - table [ref=e487]:
+        - rowgroup [ref=e488]:
+          - row [ref=e489]:
+            - columnheader "Fruit" [ref=e490]
+            - columnheader "Stock" [ref=e491]
+            - columnheader "Color" [ref=e492]
+            - columnheader "Season" [ref=e493]
+            - columnheader "Weight (g)" [ref=e494]
+            - columnheader "Price (₹/kg)" [ref=e495]
+        - rowgroup [ref=e496]:
+          - row [ref=e497]:
+            - cell "Apple" [ref=e498]
+            - cell "90" [ref=e499]
+            - cell "Red" [ref=e500]
+            - cell "Winter" [ref=e501]
+            - cell "492" [ref=e502]
+            - cell "₹391" [ref=e503]
+          - row [ref=e504]:
+            - cell "Banana" [ref=e505]
+            - cell "129" [ref=e506]
+            - cell "Green" [ref=e507]
+            - cell "All Year" [ref=e508]
+            - cell "431" [ref=e509]
+            - cell "₹62" [ref=e510]
+          - row [ref=e511]:
+            - cell "Orange" [ref=e512]
+            - cell "55" [ref=e513]
+            - cell "Orange" [ref=e514]
+            - cell "Winter" [ref=e515]
+            - cell "404" [ref=e516]
+            - cell "₹271" [ref=e517]
+          - row [ref=e518]:
+            - cell "Grapes" [ref=e519]
+            - cell "12" [ref=e520]
+            - cell "Purple" [ref=e521]
+            - cell "Monsoon" [ref=e522]
+            - cell "121" [ref=e523]
+            - cell "₹345" [ref=e524]
+          - row [ref=e525]:
+            - cell "Mango" [ref=e526]
+            - cell "164" [ref=e527]
+            - cell "Yellow" [ref=e528]
+            - cell "Summer" [ref=e529]
+            - cell "275" [ref=e530]
+            - cell "₹265" [ref=e531]
+  - generic "Advertisement" [ref=e532]:
+    - iframe [ref=e535]:
+      - iframe [ref=f2e2]:
+        - link [ref=f13e3] [cursor=pointer]:
+          - /url: https://clicks.pipaffiliates.com/c?c=873073&l=en&p=0
+  - generic [ref=e537]:
+    - generic [ref=e538]:
+      - generic [ref=e539]: "03"
+      - heading "Interactions" [level=2] [ref=e540]
+      - paragraph [ref=e541]: Drag & drop, hover effects, context menus, and click interactions.
+    - generic [ref=e542]:
+      - generic [ref=e543]:
+        - generic [ref=e544]:
+          - heading [level=3] [ref=e545]
+          - generic [ref=e549]: DnD
+        - paragraph [ref=e550]: "Reorder the items by dragging:"
+        - list [ref=e551]:
+          - listitem [ref=e552]: Check emails
+          - listitem [ref=e556]: Write code
+          - listitem [ref=e560]: Review PRs
+          - listitem [ref=e564]: Run tests
+          - listitem [ref=e568]: Deploy
+        - paragraph [ref=e573]: Drop here to remove
+      - generic [ref=e577]:
+        - generic [ref=e578]:
+          - heading [level=3] [ref=e579]
+          - generic [ref=e583]: Hover
+        - generic [ref=e584]:
+          - generic [ref=e585] [cursor=pointer]: Hover me
+          - generic [ref=e586] [cursor=pointer]: Scale
+          - generic [ref=e587] [cursor=pointer]: Rotate
+          - generic [ref=e588] [cursor=pointer]: Color
+        - button "Hover for tooltip" [ref=e590] [cursor=pointer]
+        - button "Double Click Me" [ref=e592] [cursor=pointer]
+        - button "Right Click Me" [ref=e594] [cursor=pointer]
+      - generic [ref=e595]:
+        - generic [ref=e596]:
+          - heading [level=3] [ref=e597]
+          - generic [ref=e601]: Menu
+        - paragraph [ref=e603]: Right-click anywhere in this area
+        - heading "Toggle Buttons" [level=4] [ref=e605]
+        - generic [ref=e606]:
+          - button [ref=e607] [cursor=pointer]:
+            - strong [ref=e608]: B
+          - button [ref=e609] [cursor=pointer]:
+            - emphasis [ref=e610]: I
+          - button "U" [ref=e611] [cursor=pointer]
+        - generic [ref=e614]:
+          - text: Notifications
+          - generic [ref=e615]:
+            - checkbox "Notifications OFF"
+            - generic [ref=e616] [cursor=pointer]
+          - text: "OFF"
+  - generic [ref=e618]:
+    - generic [ref=e619]:
+      - generic [ref=e620]: "04"
+      - heading "Shopping" [level=2] [ref=e621]
+      - paragraph [ref=e622]: A complete e-commerce workflow — browse products, add to cart, apply coupons, and checkout.
+    - generic [ref=e623]:
+      - generic [ref=e624]:
+        - generic [ref=e625]:
+          - img "Lamborghini Huracan" [ref=e626]
+          - generic [ref=e627]: Luxury
+        - generic [ref=e628]:
+          - heading "Lamborghini Huracan" [level=4] [ref=e629]
+          - paragraph [ref=e630]: V10 engine, 630 HP, 0-100 in 2.9s
+          - generic [ref=e631]: ₹3,21,00,000
+          - generic [ref=e632]:
+            - button "Add to Cart" [ref=e633] [cursor=pointer]
+            - button "Buy Now" [ref=e634] [cursor=pointer]
+      - generic [ref=e635]:
+        - generic [ref=e636]:
+          - img "Triumph Speed Triple" [ref=e637]
+          - generic [ref=e638]: Sport
+        - generic [ref=e639]:
+          - heading "Triumph Speed Triple 1200" [level=4] [ref=e640]
+          - paragraph [ref=e641]: 1160cc triple engine, 180 HP, Ohlins suspension
+          - generic [ref=e642]: ₹16,95,000
+          - generic [ref=e643]:
+            - button "Add to Cart" [ref=e644] [cursor=pointer]
+            - button "Buy Now" [ref=e645] [cursor=pointer]
+      - generic [ref=e646]:
+        - generic [ref=e647]:
+          - img "Seiko Presage" [ref=e648]
+          - generic [ref=e649]: Classic
+        - generic [ref=e650]:
+          - heading "Seiko Presage Cocktail Time" [level=4] [ref=e651]
+          - paragraph [ref=e652]: Automatic movement, sapphire crystal, 50m WR
+          - generic [ref=e653]: ₹32,500
+          - generic [ref=e654]:
+            - button "Add to Cart" [ref=e655] [cursor=pointer]
+            - button "Buy Now" [ref=e656] [cursor=pointer]
+      - generic [ref=e657]:
+        - generic [ref=e658]:
+          - img "Luxury Yacht" [ref=e659]
+          - generic [ref=e660]: Luxury
+        - generic [ref=e661]:
+          - heading "Oceanis Luxury Yacht" [level=4] [ref=e662]
+          - paragraph [ref=e663]: Spacious deck, premium cabin, and smooth coastal cruising
+          - generic [ref=e664]: ₹1,85,00,000
+          - generic [ref=e665]:
+            - button "Add to Cart" [ref=e666] [cursor=pointer]
+            - button "Buy Now" [ref=e667] [cursor=pointer]
+    - generic [ref=e668]:
+      - heading [level=4] [ref=e669]
+      - generic [ref=e674]:
+        - generic [ref=e675]: FLAT10 — 10% off on orders above ₹50,000
+        - generic [ref=e676]: SPEED20 — 20% off on automobiles
+        - generic [ref=e677]: FIRST500 — ₹500 off on your first order
+    - generic [ref=e678]:
+      - heading "Shopping Cart 0" [level=4] [ref=e679]:
+        - text: Shopping Cart
+        - generic [ref=e683]: "0"
+      - paragraph [ref=e685]: Your cart is empty.
+  - generic "Advertisement" [ref=e686]:
+    - iframe [ref=e689]:
+      
+  - generic [ref=e691]:
+    - generic [ref=e692]:
+      - generic [ref=e693]: "05"
+      - heading "Dynamic Content" [level=2] [ref=e694]
+      - paragraph [ref=e695]: Practice waiting for elements, handling loading states, and dynamic DOM changes.
+    - generic [ref=e696]:
+      - generic [ref=e697]:
+        - generic [ref=e698]:
+          - heading [level=3] [ref=e699]
+          - generic [ref=e703]: Wait
+        - generic [ref=e704]:
+          - generic [ref=e705]: "Delay (seconds):"
+          - combobox "Delay (seconds):" [ref=e706]:
+            - option "1 second"
+            - option "2 seconds"
+            - option "3 seconds" [selected]
+            - option "5 seconds"
+        - button "Load Content" [ref=e707] [cursor=pointer]
+        - generic [ref=e708]: Content will appear here...
+      - generic [ref=e710]:
+        - generic [ref=e711]:
+          - heading [level=3] [ref=e712]
+          - generic [ref=e717]: DOM
+        - generic [ref=e718]:
+          - button "Show Element" [ref=e719] [cursor=pointer]
+          - button "Hide Element" [ref=e720] [cursor=pointer]
+          - button "Toggle" [ref=e721] [cursor=pointer]
+        - paragraph [ref=e723]: I'm visible!
+        - generic [ref=e727]:
+          - button "Add Element" [ref=e728] [cursor=pointer]
+          - button "Remove Element" [ref=e729] [cursor=pointer]
+        - generic [ref=e730]:
+          - button "Disable Input" [ref=e731] [cursor=pointer]
+          - button "Enable Input" [ref=e732] [cursor=pointer]
+          - textbox "Type here..." [ref=e733]
+        - generic [ref=e734]:
+          - heading "Start / Stop Toggle" [level=4] [ref=e735]
+          - button "Start" [ref=e736] [cursor=pointer]
+          - generic [ref=e737]: "Status: Stopped"
+      - generic [ref=e738]:
+        - generic [ref=e739]:
+          - heading [level=3] [ref=e740]
+          - generic [ref=e744]: State
+        - generic [ref=e745]:
+          - button "−" [ref=e746] [cursor=pointer]
+          - generic [ref=e747]: "0"
+          - button "+" [ref=e748] [cursor=pointer]
+        - button "Reset" [ref=e749] [cursor=pointer]
+        - separator [ref=e750]
+        - heading "Auto-updating Timer" [level=4] [ref=e751]
+        - generic [ref=e752]: 00:00
+        - generic [ref=e753]:
+          - button "Start" [ref=e754] [cursor=pointer]
+          - button "Stop" [ref=e755] [cursor=pointer]
+          - button "Reset" [ref=e756] [cursor=pointer]
+      - generic [ref=e757]:
+        - generic [ref=e758]:
+          - heading [level=3] [ref=e759]
+          - generic [ref=e763]: Progress
+        - generic [ref=e764]:
+          - generic [ref=e765]: Download Progress
+          - generic [ref=e766]: 0%
+        - button "Simulate Download" [ref=e767] [cursor=pointer]
+        - generic [ref=e768]:
+          - generic [ref=e769]: Circular Progress
+          - generic [ref=e770]: Click to load
+          - button "Toggle Spinner" [ref=e772] [cursor=pointer]
+        - generic [ref=e773]:
+          - generic [ref=e774]: Skeleton Loading
+          - button "Toggle Skeleton" [ref=e775] [cursor=pointer]
+  - generic [ref=e784]:
+    - generic [ref=e785]:
+      - generic [ref=e786]: "06"
+      - heading "Modals & Alerts" [level=2] [ref=e787]
+      - paragraph [ref=e788]: Dialog boxes, confirmation prompts, toast notifications, and alerts.
+    - generic [ref=e789]:
+      - generic [ref=e790]:
+        - generic [ref=e791]:
+          - heading [level=3] [ref=e792]
+          - generic [ref=e796]: Modal
+        - generic [ref=e797]:
+          - button "Open Modal" [ref=e798] [cursor=pointer]
+          - button "Confirm Dialog" [ref=e799] [cursor=pointer]
+          - button "Prompt Dialog" [ref=e800] [cursor=pointer]
+          - button "Nested Modal" [ref=e801] [cursor=pointer]
+        - separator [ref=e803]
+        - generic [ref=e804]:
+          - heading [level=4] [ref=e805]
+          - generic [ref=e809]: Auth
+        - paragraph [ref=e810]:
+          - text: Opens the
+          - strong [ref=e811]: real
+          - text: native HTTP Basic Authentication popup (server returns
+          - code [ref=e812]: "401"
+          - text: ). Handle it in Playwright via
+          - code [ref=e813]: httpCredentials
+          - text: .
+        - generic [ref=e816]:
+          - generic [ref=e817]:
+            - text: "Username:"
+            - code [ref=e818]: admin
+          - generic [ref=e819]:
+            - text: "Password:"
+            - code [ref=e820]: password123
+        - link "Open Basic Auth Popup" [ref=e822] [cursor=pointer]:
+          - /url: https://httpbin.org/basic-auth/admin/password123
+      - generic [ref=e823]:
+        - generic [ref=e824]:
+          - heading [level=3] [ref=e825]
+          - generic [ref=e829]: Toast
+        - generic [ref=e830]:
+          - button "Success Toast" [ref=e831] [cursor=pointer]
+          - button "Error Toast" [ref=e832] [cursor=pointer]
+          - button "Warning Toast" [ref=e833] [cursor=pointer]
+          - button "Info Toast" [ref=e834] [cursor=pointer]
+        - separator [ref=e835]
+        - generic [ref=e836]:
+          - heading [level=4] [ref=e837]
+          - generic [ref=e841]: Native
+        - generic [ref=e842]:
+          - button "window.alert()" [ref=e843] [cursor=pointer]
+          - button "window.confirm()" [ref=e844] [cursor=pointer]
+          - button "window.prompt()" [ref=e845] [cursor=pointer]
+        - separator [ref=e847]
+        - generic [ref=e848]:
+          - heading [level=4] [ref=e849]
+          - generic [ref=e853]: Alert
+        - generic [ref=e854]: Success! Operation completed.
+        - generic [ref=e858]: Error! Something went wrong.
+        - generic [ref=e862]: Warning! Please check your input.
+        - generic [ref=e866]: "Info: System will restart at midnight."
+  - generic [ref=e871]:
+    - generic [ref=e872]:
+      - generic [ref=e873]: "07"
+      - heading "Tabs & Accordion" [level=2] [ref=e874]
+      - paragraph [ref=e875]: Tabbed interfaces and collapsible content panels.
+    - generic [ref=e876]:
+      - generic [ref=e877]:
+        - heading [level=3] [ref=e879]
+        - generic [ref=e883]:
+          - generic [ref=e884]:
+            - button "Overview" [ref=e885] [cursor=pointer]
+            - button "Features" [ref=e886] [cursor=pointer]
+            - button "Pricing" [ref=e887] [cursor=pointer]
+            - button "Disabled" [disabled] [ref=e888]
+          - generic [ref=e889]:
+            - heading "Overview" [level=4] [ref=e890]
+            - paragraph [ref=e891]: PlayLab is a comprehensive test automation practice website designed for learning Playwright, Selenium, Cypress, and other browser automation tools.
+      - generic [ref=e892]:
+        - heading [level=3] [ref=e894]
+        - generic [ref=e898]:
+          - generic [ref=e899]:
+            - button "What is Playwright? ▼" [ref=e900] [cursor=pointer]:
+              - generic [ref=e901]: What is Playwright?
+              - generic [ref=e902]: ▼
+            - paragraph [ref=e904]: Playwright is a modern end-to-end testing framework created by Microsoft. It supports Chromium, Firefox, and WebKit browsers with a single API.
+          - generic [ref=e905]:
+            - button "Why use this practice site? ▼" [ref=e906] [cursor=pointer]:
+              - generic [ref=e907]: Why use this practice site?
+              - generic [ref=e908]: ▼
+            - paragraph [ref=e909]: This site provides a safe environment to practice various automation scenarios without affecting real applications. It covers forms, tables, modals, drag & drop, and more.
+          - generic [ref=e910]:
+            - button "How to get started? ▼" [ref=e911] [cursor=pointer]:
+              - generic [ref=e912]: How to get started?
+              - generic [ref=e913]: ▼
+            - paragraph [ref=e914]:
+              - text: Install Playwright with
+              - code [ref=e915]: npm init playwright@latest
+              - text: ", then write your tests targeting this site's elements using the provided data-testid attributes."
+          - generic [ref=e916]:
+            - button "Can I contribute? ▼" [ref=e917] [cursor=pointer]:
+              - generic [ref=e918]: Can I contribute?
+              - generic [ref=e919]: ▼
+            - paragraph [ref=e920]: Absolutely! Fork the repository, add new practice sections, and submit a pull request. All contributions are welcome.
+  - generic [ref=e922]:
+    - generic [ref=e923]:
+      - generic [ref=e924]: "08"
+      - heading "Frames & Windows" [level=2] [ref=e925]
+      - paragraph [ref=e926]: Practice with iframes, new windows, and cross-frame interactions.
+    - generic [ref=e927]:
+      - generic [ref=e928]:
+        - generic [ref=e929]:
+          - heading [level=3] [ref=e930]
+          - generic [ref=e934]: Frame
+        - iframe [ref=e935]:
+          - generic [ref=f4e1]:
+            - heading "iFrame Form" [level=3] [ref=f4e2]
+            - paragraph [ref=f4e3]: This content is inside an iFrame. Practice locating and interacting with these elements.
+            - generic [ref=f4e4]:
+              - generic [ref=f4e5]:
+                - text: Your Name
+                - textbox "Your Name" [ref=f4e6]:
+                  - /placeholder: Enter your name
+              - generic [ref=f4e7]:
+                - text: Message
+                - textbox "Message" [ref=f4e8]:
+                  - /placeholder: Write a message...
+              - generic [ref=f4e9]:
+                - text: Priority
+                - combobox "Priority" [ref=f4e10]:
+                  - option "Low"
+                  - option "Medium" [selected]
+                  - option "High"
+                  - option "Critical"
+              - generic [ref=f4e11]:
+                - checkbox "Mark as urgent" [ref=f4e12]
+                - generic [ref=f4e13]: Mark as urgent
+              - generic [ref=f4e14]:
+                - button "Submit" [ref=f4e15] [cursor=pointer]
+                - button "Reset" [ref=f4e16] [cursor=pointer]
+      - generic [ref=e936]:
+        - generic [ref=e937]:
+          - heading [level=3] [ref=e938]
+          - generic [ref=e942]: Nested
+        - iframe [ref=e943]:
+          - generic [ref=f5e1]:
+            - paragraph [ref=f5e2]: Outer frame
+            - iframe [ref=f5e3]:
+              - generic [ref=f11e1]:
+                - heading "iFrame Form" [level=3] [ref=f11e2]
+                - paragraph [ref=f11e3]: This content is inside an iFrame. Practice locating and interacting with these elements.
+                - generic [ref=f11e4]:
+                  - generic [ref=f11e5]:
+                    - text: Your Name
+                    - textbox "Your Name" [ref=f11e6]:
+                      - /placeholder: Enter your name
+                  - generic [ref=f11e7]:
+                    - text: Message
+                    - textbox "Message" [ref=f11e8]:
+                      - /placeholder: Write a message...
+                  - generic [ref=f11e9]:
+                    - text: Priority
+                    - combobox "Priority" [ref=f11e10]:
+                      - option "Low"
+                      - option "Medium" [selected]
+                      - option "High"
+                      - option "Critical"
+                  - generic [ref=f11e11]:
+                    - checkbox "Mark as urgent" [ref=f11e12]
+                    - generic [ref=f11e13]: Mark as urgent
+                  - generic [ref=f11e14]:
+                    - button "Submit" [ref=f11e15] [cursor=pointer]
+                    - button "Reset" [ref=f11e16] [cursor=pointer]
+      - generic [ref=e944]:
+        - generic [ref=e945]:
+          - heading [level=3] [ref=e946]
+          - generic [ref=e950]: External
+        - iframe [ref=e951]:
+          - generic [ref=f6e2]:
+            - region "Skip to main content":
+              - link "Skip to main content" [ref=f6e3] [cursor=pointer]:
+                - /url: "#__docusaurus_skipToContent_fallback"
+            - navigation "Main" [ref=f6e4]:
+              - generic [ref=f6e5]:
+                - generic [ref=f6e6]:
+                  - button "Toggle navigation bar" [ref=f6e7] [cursor=pointer]
+                  - link "Playwright logo Playwright" [ref=f6e10] [cursor=pointer]:
+                    - /url: /
+                    - img "Playwright logo" [ref=f6e12]
+                    - generic [ref=f6e13]: Playwright
+                - button "Search (Control+k)" [ref=f6e15] [cursor=pointer]
+            - generic [ref=f6e20]:
+              - banner [ref=f6e21]:
+                - generic [ref=f6e22]:
+                  - heading "Playwright enables reliable web automation for testing, scripting, and AI agents." [level=1] [ref=f6e23]
+                  - paragraph [ref=f6e24]:
+                    - text: One API to drive Chromium, Firefox, and WebKit — in your tests, your scripts, and your agent workflows. Available for
+                    - link "TypeScript" [ref=f6e25] [cursor=pointer]:
+                      - /url: https://playwright.dev/docs/intro
+                    - text: ","
+                    - link "Python" [ref=f6e26] [cursor=pointer]:
+                      - /url: https://playwright.dev/python/docs/intro
+                    - text: ","
+                    - link ".NET" [ref=f6e27] [cursor=pointer]:
+                      - /url: https://playwright.dev/dotnet/docs/intro
+                    - text: ", and"
+                    - link "Java" [ref=f6e28] [cursor=pointer]:
+                      - /url: https://playwright.dev/java/docs/intro
+                    - text: .
+                  - generic [ref=f6e29]:
+                    - link "Get started" [ref=f6e30] [cursor=pointer]:
+                      - /url: /docs/intro
+                    - generic [ref=f6e31]:
+                      - link "Star microsoft/playwright on GitHub" [ref=f6e32] [cursor=pointer]:
+                        - /url: https://github.com/microsoft/playwright
+                        - text: Star
+                      - link "96k+ stargazers on GitHub" [ref=f6e34] [cursor=pointer]:
+                        - /url: https://github.com/microsoft/playwright/stargazers
+                        - text: 96k+
+              - main [ref=f6e35]:
+                - generic [ref=f6e38]:
+                  - generic [ref=f6e39]:
+                    - heading "Playwright Test" [level=3] [ref=f6e40]
+                    - paragraph [ref=f6e41]: Full-featured test runner with auto-waiting, assertions, tracing, and parallelism across Chromium, Firefox, and WebKit.
+                    - code [ref=f6e42]: npm init playwright@latest
+                    - link "Testing documentation" [ref=f6e44] [cursor=pointer]:
+                      - /url: /docs/intro
+                  - generic [ref=f6e45]:
+                    - heading "Playwright CLI" [level=3] [ref=f6e46]
+                    - paragraph [ref=f6e47]: Token-efficient browser automation for coding agents like Claude Code and GitHub Copilot. Skill-based workflows without large context overhead.
+                    - code [ref=f6e48]: npm i -g @playwright/cli@latest
+                    - link "CLI documentation" [ref=f6e50] [cursor=pointer]:
+                      - /url: /docs/getting-started-cli
+                  - generic [ref=f6e51]:
+                    - heading "Playwright MCP" [level=3] [ref=f6e52]
+                    - paragraph [ref=f6e53]: Model Context Protocol server that gives AI agents full browser control through structured accessibility snapshots.
+                    - code [ref=f6e54]: npx @playwright/mcp@latest
+                    - link "MCP documentation" [ref=f6e56] [cursor=pointer]:
+                      - /url: /docs/getting-started-mcp
+                - generic [ref=f6e58]:
+                  - heading "Built for testing" [level=2] [ref=f6e59]
+                  - generic [ref=f6e61]:
+                    - generic [ref=f6e62]:
+                      - heading "Auto-wait and web-first assertions" [level=4] [ref=f6e63]
+                      - paragraph [ref=f6e64]: Playwright waits for elements to be actionable before performing actions. Assertions automatically retry until conditions are met. No artificial timeouts, no flaky tests.
+                      - heading "Test isolation" [level=4] [ref=f6e65]
+                      - paragraph [ref=f6e66]: Each test gets a fresh browser context — equivalent to a brand new browser profile. Full isolation with near-zero overhead. Save authentication state once and reuse it across tests.
+                    - generic [ref=f6e67]:
+                      - heading "Resilient locators" [level=4] [ref=f6e68]
+                      - paragraph [ref=f6e69]:
+                        - text: "Find elements with selectors that mirror how users see the page:"
+                        - code [ref=f6e70]: getByRole
+                        - text: ","
+                        - code [ref=f6e71]: getByLabel
+                        - text: ","
+                        - code [ref=f6e72]: getByPlaceholder
+                        - text: ","
+                        - code [ref=f6e73]: getByTestId
+                        - text: . No brittle CSS paths.
+                      - heading "Parallelism and sharding" [level=4] [ref=f6e74]
+                      - paragraph [ref=f6e75]: Tests run in parallel by default across all configured browsers. Shard across multiple machines for faster CI. Full cross-browser coverage on every commit.
+                - generic [ref=f6e77]:
+                  - heading "Built for AI agents" [level=2] [ref=f6e78]
+                  - generic [ref=f6e80]:
+                    - generic [ref=f6e81]:
+                      - heading "Accessibility snapshots, not screenshots" [level=4] [ref=f6e82]
+                      - paragraph [ref=f6e83]: Agents interact with pages through structured accessibility trees — element roles, names, and refs. Deterministic and unambiguous, no vision models required.
+                      - heading "MCP server" [level=4] [ref=f6e84]
+                      - paragraph [ref=f6e85]:
+                        - text: Drop-in
+                        - link "Model Context Protocol" [ref=f6e86] [cursor=pointer]:
+                          - /url: https://modelcontextprotocol.io
+                        - text: server for VS Code, Cursor, Claude Desktop, Windsurf, and any MCP client. Full browser control through standard tool calls.
+                    - generic [ref=f6e87]:
+                      - heading "CLI for coding agents" [level=4] [ref=f6e88]
+                      - paragraph [ref=f6e89]: Token-efficient command-line interface with installable skills. Purpose-built for Claude Code, GitHub Copilot, and similar coding agents that need to balance browser automation with large codebases.
+                      - heading "Session monitoring" [level=4] [ref=f6e90]
+                      - paragraph [ref=f6e91]: Visual dashboard with live screencast previews of all running browser sessions. Click any session to zoom in and take control.
+                - generic [ref=f6e93]:
+                  - heading "Powerful tooling" [level=2] [ref=f6e94]
+                  - generic [ref=f6e96]:
+                    - generic [ref=f6e97]:
+                      - heading [level=4] [ref=f6e98]:
+                        - link "Test generator" [ref=f6e99] [cursor=pointer]:
+                          - /url: docs/codegen
+                      - paragraph [ref=f6e100]: Record your actions in the browser and Playwright writes the test code. Generate assertions from the recording toolbar. Pick locators by clicking on elements.
+                    - generic [ref=f6e101]:
+                      - heading [level=4] [ref=f6e102]:
+                        - link "Trace Viewer" [ref=f6e103] [cursor=pointer]:
+                          - /url: docs/trace-viewer-intro
+                      - paragraph [ref=f6e104]: Full timeline of test execution with DOM snapshots, network requests, console logs, and screenshots at every step. Investigate failures without re-running.
+                    - generic [ref=f6e105]:
+                      - heading [level=4] [ref=f6e106]:
+                        - link "VS Code extension" [ref=f6e107] [cursor=pointer]:
+                          - /url: docs/getting-started-vscode
+                      - paragraph [ref=f6e108]: Run, debug, and generate tests directly in the editor. Set breakpoints, live-inspect locators in the browser, and view full execution traces in the sidebar.
+                - generic [ref=f6e110]:
+                  - img "Chromium, Firefox, WebKit" [ref=f6e111]
+                  - paragraph [ref=f6e112]:
+                    - text: Any browser. Any platform. Chromium, Firefox, and WebKit on Linux, macOS, and Windows. Headless and headed. Also available for
+                    - link "Python" [ref=f6e113] [cursor=pointer]:
+                      - /url: https://playwright.dev/python/docs/intro
+                    - text: ","
+                    - link ".NET" [ref=f6e114] [cursor=pointer]:
+                      - /url: https://playwright.dev/dotnet/docs/intro
+                    - text: ", and"
+                    - link "Java" [ref=f6e115] [cursor=pointer]:
+                      - /url: https://playwright.dev/java/docs/intro
+                    - text: .
+                - generic [ref=f6e119]:
+                  - heading "Chosen by companies and open source projects" [level=2] [ref=f6e120]
+                  - list [ref=f6e121]:
+                    - listitem [ref=f6e122]:
+                      - link [ref=f6e123] [cursor=pointer]:
+                        - /url: https://code.visualstudio.com
+                        - img "VS Code" [ref=f6e124]
+                    - listitem [ref=f6e125]:
+                      - link [ref=f6e126] [cursor=pointer]:
+                        - /url: https://bing.com
+                        - img "Bing" [ref=f6e127]
+                    - listitem [ref=f6e128]:
+                      - link [ref=f6e129] [cursor=pointer]:
+                        - /url: https://outlook.com
+                        - img "Outlook" [ref=f6e130]
+                    - listitem [ref=f6e131]:
+                      - link [ref=f6e132] [cursor=pointer]:
+                        - /url: https://www.hotstar.com/
+                        - img "Disney+ Hotstar" [ref=f6e133]
+                    - listitem [ref=f6e134]:
+                      - link [ref=f6e135] [cursor=pointer]:
+                        - /url: https://github.com/mui-org/material-ui
+                        - img "Material UI" [ref=f6e136]
+                    - listitem [ref=f6e137]:
+                      - link [ref=f6e138] [cursor=pointer]:
+                        - /url: https://github.com/ing-bank/lion
+                        - img "ING" [ref=f6e139]
+                    - listitem [ref=f6e140]:
+                      - link [ref=f6e141] [cursor=pointer]:
+                        - /url: https://github.com/adobe/spectrum-web-components
+                        - img "Adobe" [ref=f6e142]
+                    - listitem [ref=f6e143]:
+                      - link [ref=f6e144] [cursor=pointer]:
+                        - /url: https://github.com/react-navigation/react-navigation
+                        - img "React Navigation" [ref=f6e145]
+                    - listitem [ref=f6e146]:
+                      - link [ref=f6e147] [cursor=pointer]:
+                        - /url: https://accessibilityinsights.io/
+                        - img "Accessibility Insights" [ref=f6e148]
+            - contentinfo [ref=f6e149]:
+              - generic [ref=f6e150]:
+                - generic [ref=f6e151]:
+                  - generic [ref=f6e152]:
+                    - generic [ref=f6e153]: Learn
+                    - list [ref=f6e154]:
+                      - listitem [ref=f6e155]:
+                        - link "Getting started" [ref=f6e156] [cursor=pointer]:
+                          - /url: /docs/intro
+                      - listitem [ref=f6e157]:
+                        - link [ref=f6e158] [cursor=pointer]:
+                          - /url: https://learn.microsoft.com/en-us/training/modules/build-with-playwright/
+                          - text: Playwright Training
+                          - img "(opens in new tab)" [ref=f6e159]
+                      - listitem [ref=f6e161]:
+                        - link "Learn Videos" [ref=f6e162] [cursor=pointer]:
+                          - /url: /community/learn-videos
+                      - listitem [ref=f6e163]:
+                        - link "Feature Videos" [ref=f6e164] [cursor=pointer]:
+                          - /url: /community/feature-videos
+                  - generic [ref=f6e165]:
+                    - generic [ref=f6e166]: Community
+                    - list [ref=f6e167]:
+                      - listitem [ref=f6e168]:
+                        - link [ref=f6e169] [cursor=pointer]:
+                          - /url: https://stackoverflow.com/questions/tagged/playwright
+                          - text: Stack Overflow
+                          - img "(opens in new tab)" [ref=f6e170]
+                      - listitem [ref=f6e172]:
+                        - link [ref=f6e173] [cursor=pointer]:
+                          - /url: https://aka.ms/playwright/discord
+                          - text: Discord
+                          - img "(opens in new tab)" [ref=f6e174]
+                      - listitem [ref=f6e176]:
+                        - link [ref=f6e177] [cursor=pointer]:
+                          - /url: https://x.com/playwrightweb
+                          - text: X
+                          - img "(opens in new tab)" [ref=f6e178]
+                      - listitem [ref=f6e180]:
+                        - link [ref=f6e181] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/playwrightweb
+                          - text: LinkedIn
+                          - img "(opens in new tab)" [ref=f6e182]
+                  - generic [ref=f6e184]:
+                    - generic [ref=f6e185]: More
+                    - list [ref=f6e186]:
+                      - listitem [ref=f6e187]:
+                        - link [ref=f6e188] [cursor=pointer]:
+                          - /url: https://github.com/microsoft/playwright
+                          - text: GitHub
+                          - img "(opens in new tab)" [ref=f6e189]
+                      - listitem [ref=f6e191]:
+                        - link [ref=f6e192] [cursor=pointer]:
+                          - /url: https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg
+                          - text: YouTube
+                          - img "(opens in new tab)" [ref=f6e193]
+                      - listitem [ref=f6e195]:
+                        - link [ref=f6e196] [cursor=pointer]:
+                          - /url: https://dev.to/playwright
+                          - text: Blog
+                          - img "(opens in new tab)" [ref=f6e197]
+                      - listitem [ref=f6e199]:
+                        - link "Ambassadors" [ref=f6e200] [cursor=pointer]:
+                          - /url: /community/ambassadors
+                      - listitem [ref=f6e201]:
+                        - link [ref=f6e202] [cursor=pointer]:
+                          - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+                          - text: Microsoft Privacy Statement
+                          - img "(opens in new tab)" [ref=f6e203]
+                - generic [ref=f6e205]: Copyright © 2026 Microsoft
+      - generic [ref=e952]:
+        - generic [ref=e953]:
+          - heading [level=3] [ref=e954]
+          - generic [ref=e958]: Window
+        - generic [ref=e959]:
+          - button "Open New Tab" [ref=e960] [cursor=pointer]
+          - button "Open Popup Window" [ref=e961] [cursor=pointer]
+          - button "Print Dialog" [ref=e962] [cursor=pointer]
+  - generic [ref=e964]:
+    - generic [ref=e965]:
+      - generic [ref=e966]: "09"
+      - heading "Uploads & Downloads" [level=2] [ref=e967]
+      - paragraph [ref=e968]: Single/multiple file upload flows plus a real PDF to test browser download/viewer behavior.
+    - generic [ref=e969]:
+      - generic [ref=e970]:
+        - generic [ref=e971]:
+          - heading [level=3] [ref=e972]
+          - generic [ref=e976]: Single
+        - generic [ref=e977] [cursor=pointer]:
+          - paragraph [ref=e982]: Drag & drop a file here or browse
+          - generic [ref=e983]: One file only (Max 5MB)
+        - button "Upload" [ref=e984] [cursor=pointer]
+      - generic [ref=e985]:
+        - generic [ref=e986]:
+          - heading [level=3] [ref=e987]
+          - generic [ref=e991]: Multiple
+        - generic [ref=e992] [cursor=pointer]:
+          - paragraph [ref=e997]: Drag & drop files here or browse
+          - generic [ref=e998]: Multiple files allowed (Max 5MB each)
+        - button "Upload" [ref=e999] [cursor=pointer]
+    - generic [ref=e1000]:
+      - generic [ref=e1001]:
+        - heading [level=3] [ref=e1002]
+        - generic [ref=e1006]: PDF
+      - generic [ref=e1007]:
+        - link [ref=e1008] [cursor=pointer]:
+          - /url: pdf/Playwright-Cheat-Sheet.pdf
+        - button [ref=e1012] [cursor=pointer]
+  - generic [ref=e1018]:
+    - generic [ref=e1019]:
+      - generic [ref=e1020]: "10"
+      - heading "Shadow DOM" [level=2] [ref=e1021]
+      - paragraph [ref=e1022]: Elements encapsulated within Shadow DOM for advanced testing.
+    - generic [ref=e1023]:
+      - generic [ref=e1024]:
+        - heading [level=3] [ref=e1026]
+        - generic [ref=e1031]:
+          - heading "Inside Shadow DOM" [level=4] [ref=e1032]
+          - paragraph [ref=e1033]: These elements are encapsulated within a Shadow DOM boundary.
+          - textbox "Type inside shadow DOM..." [ref=e1034]
+          - button "Click Me" [ref=e1035] [cursor=pointer]
+      - generic [ref=e1037]:
+        - heading [level=3] [ref=e1039]
+        - generic [ref=e1044]:
+          - heading "Outer Shadow DOM" [level=4] [ref=e1045]
+          - paragraph [ref=e1046]: This has a nested shadow DOM inside it.
+          - generic [ref=e1048]:
+            - heading "Inner Shadow DOM (Nested)" [level=5] [ref=e1049]
+            - button "Click Inner Button" [ref=e1050] [cursor=pointer]
+  - generic "Advertisement" [ref=e1051]:
+    - iframe [ref=e1054]:
+      
+  - generic [ref=e1056]:
+    - generic [ref=e1057]:
+      - generic [ref=e1058]: "11"
+      - heading "Advanced Scenarios" [level=2] [ref=e1059]
+      - paragraph [ref=e1060]: Complex patterns for advanced automation practice.
+    - generic [ref=e1061]:
+      - generic [ref=e1062]:
+        - generic [ref=e1063]:
+          - heading [level=3] [ref=e1064]
+          - generic [ref=e1068]: Scroll
+        - generic [ref=e1069]:
+          - generic [ref=e1070]:
+            - generic [ref=e1071]: "1"
+            - generic [ref=e1072]:
+              - strong [ref=e1073]: "Item #1"
+              - generic [ref=e1074]: Loaded at 11:31:21 am
+          - generic [ref=e1075]:
+            - generic [ref=e1076]: "2"
+            - generic [ref=e1077]:
+              - strong [ref=e1078]: "Item #2"
+              - generic [ref=e1079]: Loaded at 11:31:21 am
+          - generic [ref=e1080]:
+            - generic [ref=e1081]: "3"
+            - generic [ref=e1082]:
+              - strong [ref=e1083]: "Item #3"
+              - generic [ref=e1084]: Loaded at 11:31:21 am
+          - generic [ref=e1085]:
+            - generic [ref=e1086]: "4"
+            - generic [ref=e1087]:
+              - strong [ref=e1088]: "Item #4"
+              - generic [ref=e1089]: Loaded at 11:31:21 am
+          - generic [ref=e1090]:
+            - generic [ref=e1091]: "5"
+            - generic [ref=e1092]:
+              - strong [ref=e1093]: "Item #5"
+              - generic [ref=e1094]: Loaded at 11:31:21 am
+          - generic [ref=e1095]:
+            - generic [ref=e1096]: "6"
+            - generic [ref=e1097]:
+              - strong [ref=e1098]: "Item #6"
+              - generic [ref=e1099]: Loaded at 11:31:21 am
+          - generic [ref=e1100]:
+            - generic [ref=e1101]: "7"
+            - generic [ref=e1102]:
+              - strong [ref=e1103]: "Item #7"
+              - generic [ref=e1104]: Loaded at 11:31:21 am
+          - generic [ref=e1105]:
+            - generic [ref=e1106]: "8"
+            - generic [ref=e1107]:
+              - strong [ref=e1108]: "Item #8"
+              - generic [ref=e1109]: Loaded at 11:31:21 am
+          - generic [ref=e1110]:
+            - generic [ref=e1111]: "9"
+            - generic [ref=e1112]:
+              - strong [ref=e1113]: "Item #9"
+              - generic [ref=e1114]: Loaded at 11:31:21 am
+          - generic [ref=e1115]:
+            - generic [ref=e1116]: "10"
+            - generic [ref=e1117]:
+              - strong [ref=e1118]: "Item #10"
+              - generic [ref=e1119]: Loaded at 11:31:21 am
+      - generic [ref=e1120]:
+        - generic [ref=e1121]:
+          - heading [level=3] [ref=e1122]
+          - generic [ref=e1126]: Keyboard
+        - generic [ref=e1127]:
+          - generic [ref=e1128]: Copy to clipboard
+          - generic [ref=e1129]:
+            - textbox [ref=e1130]: Hello Playwright!
+            - button "Copy" [ref=e1131] [cursor=pointer]
+        - generic [ref=e1132]:
+          - generic [ref=e1133]: Keyboard Events
+          - textbox "Type and watch events..." [ref=e1134]
+          - generic [ref=e1135]: Press any key...
+        - generic [ref=e1136]:
+          - generic [ref=e1137]: Paste Area
+          - textbox "Paste something here..." [ref=e1138]
+      - generic [ref=e1139]:
+        - generic [ref=e1140]:
+          - heading [level=3] [ref=e1141]
+          - generic [ref=e1145]: API
+        - button "Fetch API Data" [ref=e1146] [cursor=pointer]
+        - generic [ref=e1147]: Click to fetch data...
+        - separator [ref=e1148]
+        - heading "Local Storage" [level=4] [ref=e1149]
+        - generic [ref=e1150]:
+          - generic [ref=e1151]:
+            - textbox "Key" [ref=e1152]
+            - textbox "Value" [ref=e1153]
+          - generic [ref=e1154]:
+            - button "Set" [ref=e1155] [cursor=pointer]
+            - button "Get" [ref=e1156] [cursor=pointer]
+            - button "Clear All" [ref=e1157] [cursor=pointer]
+    - generic [ref=e1159]:
+      - generic [ref=e1160]:
+        - heading [level=3] [ref=e1161]
+        - generic [ref=e1165]: Gallery
+      - generic [ref=e1166]:
+        - generic [ref=e1167] [cursor=pointer]:
+          - img "Mountains" [ref=e1169]
+          - paragraph [ref=e1170]: Mountains
+        - generic [ref=e1171] [cursor=pointer]:
+          - img "Ocean" [ref=e1173]
+          - paragraph [ref=e1174]: Ocean
+        - generic [ref=e1175] [cursor=pointer]:
+          - img "Forest" [ref=e1177]
+          - paragraph [ref=e1178]: Forest
+        - generic [ref=e1179] [cursor=pointer]:
+          - img "Desert" [ref=e1181]
+          - paragraph [ref=e1182]: Desert
+        - generic [ref=e1183] [cursor=pointer]:
+          - img "Arctic" [ref=e1185]
+          - paragraph [ref=e1186]: Arctic
+        - generic [ref=e1187] [cursor=pointer]:
+          - img "Spring" [ref=e1189]
+          - paragraph [ref=e1190]: Spring
+  - generic [ref=e1192]:
+    - generic [ref=e1193]:
+      - generic [ref=e1194]: "12"
+      - heading "Multi-Step Wizard" [level=2] [ref=e1195]
+      - paragraph [ref=e1196]: Navigate through a multi-step form with validation at each step.
+    - generic [ref=e1197]:
+      - generic [ref=e1198]:
+        - generic [ref=e1199]:
+          - generic [ref=e1200]: "1"
+          - generic [ref=e1201]: Personal
+        - generic [ref=e1203]:
+          - generic [ref=e1204]: "2"
+          - generic [ref=e1205]: Address
+        - generic [ref=e1207]:
+          - generic [ref=e1208]: "3"
+          - generic [ref=e1209]: Payment
+        - generic [ref=e1211]:
+          - generic [ref=e1212]: "4"
+          - generic [ref=e1213]: Review
+      - generic [ref=e1215]:
+        - heading "Personal Information" [level=3] [ref=e1216]
+        - generic [ref=e1217]:
+          - generic [ref=e1218]:
+            - generic [ref=e1219]: First Name *
+            - textbox "John" [ref=e1220]
+          - generic [ref=e1221]:
+            - generic [ref=e1222]: Last Name *
+            - textbox "Doe" [ref=e1223]
+        - generic [ref=e1224]:
+          - generic [ref=e1225]: Email *
+          - textbox "john@example.com" [ref=e1226]
+      - generic [ref=e1228]:
+        - button "Back" [disabled] [ref=e1229]
+        - button "Next" [ref=e1230] [cursor=pointer]
+  - generic [ref=e1231]:
+    - generic [ref=e1236]:
+      - strong [ref=e1237]: Cookie Consent
+      - paragraph [ref=e1238]:
+        - text: We use cookies to enhance your experience. Read our
+        - link "Privacy Policy" [ref=e1239] [cursor=pointer]:
+          - /url: privacy.html
+        - text: for details.
+    - generic [ref=e1240]:
+      - button "Settings" [ref=e1241] [cursor=pointer]
+      - button "Reject All" [ref=e1242] [cursor=pointer]
+      - button "Accept All" [ref=e1243] [cursor=pointer]
+  - generic [ref=e1245]:
+    - generic [ref=e1246]:
+      - generic [ref=e1247]: "13"
+      - heading "Carousel / Slider" [level=2] [ref=e1248]
+      - paragraph [ref=e1249]: Image carousel with navigation, autoplay, and indicator dots.
+    - generic [ref=e1250]:
+      - generic [ref=e1251]:
+        - generic [ref=e1252]:
+          - generic [ref=e1253]:
+            - heading "Welcome to PlayLab" [level=2] [ref=e1254]
+            - paragraph [ref=e1255]: Your ultimate Playwright practice arena
+          - generic [ref=e1256]:
+            - heading "50+ UI Elements" [level=2] [ref=e1257]
+            - paragraph [ref=e1258]: Forms, tables, modals, and much more
+          - generic [ref=e1259]:
+            - heading "Real-World Patterns" [level=2] [ref=e1260]
+            - paragraph [ref=e1261]: Practice with patterns you'll find in production
+          - generic [ref=e1262]:
+            - heading "Completely Free" [level=2] [ref=e1263]
+            - paragraph [ref=e1264]: Open source and free to use for learning
+        - button [ref=e1265] [cursor=pointer]
+        - button [ref=e1269] [cursor=pointer]
+        - generic [ref=e1273]:
+          - button [ref=e1274] [cursor=pointer]
+          - button [ref=e1275] [cursor=pointer]
+          - button [ref=e1276] [cursor=pointer]
+          - button [ref=e1277] [cursor=pointer]
+      - generic [ref=e1278]:
+        - generic [ref=e1279] [cursor=pointer]:
+          - checkbox "Autoplay" [checked] [ref=e1280]
+          - text: Autoplay
+        - generic [ref=e1281]: Slide 3 of 4
+  - generic "Advertisement" [ref=e1282]:
+    - iframe [ref=e1285]:
+      
+  - generic [ref=e1287]:
+    - generic [ref=e1288]:
+      - generic [ref=e1289]: "14"
+      - heading "Network & API" [level=2] [ref=e1290]
+      - paragraph [ref=e1291]: Practice intercepting network requests, mocking APIs, and handling responses.
+    - generic [ref=e1292]:
+      - generic [ref=e1293]:
+        - heading [level=3] [ref=e1294]
+        - generic [ref=e1298]: GET
+      - paragraph [ref=e1299]:
+        - text: Fetches from
+        - code [ref=e1300]: https://jsonplaceholder.typicode.com/users
+      - button "Fetch Users" [ref=e1301] [cursor=pointer]
+      - generic [ref=e1303]: Click to fetch...
+    - generic [ref=e1304]:
+      - generic [ref=e1305]:
+        - heading [level=3] [ref=e1306]
+        - generic [ref=e1310]: POST
+      - generic [ref=e1311]:
+        - generic [ref=e1312]: Title
+        - textbox "My Post Title" [ref=e1313]
+      - generic [ref=e1314]:
+        - generic [ref=e1315]: Body
+        - textbox "Post content..." [ref=e1316]
+      - button "Submit POST" [ref=e1317] [cursor=pointer]
+      - generic [ref=e1318]: Submit to see response...
+    - generic [ref=e1319]:
+      - generic [ref=e1320]:
+        - heading [level=3] [ref=e1321]
+        - generic [ref=e1325]: Delay
+      - paragraph [ref=e1326]: Simulates a slow API response for testing timeouts.
+      - generic [ref=e1327]:
+        - generic [ref=e1328]: Response Delay
+        - combobox [ref=e1329]:
+          - option "2 seconds"
+          - option "5 seconds" [selected]
+          - option "10 seconds"
+      - button "Call Slow API" [ref=e1330] [cursor=pointer]
+      - generic [ref=e1331]: Waiting...
+    - generic [ref=e1332]:
+      - generic [ref=e1333]:
+        - heading [level=3] [ref=e1334]
+        - generic [ref=e1338]: Errors
+      - paragraph [ref=e1339]: "Trigger different HTTP error responses:"
+      - generic [ref=e1340]:
+        - button "400 Bad Request" [ref=e1341] [cursor=pointer]
+        - button "401 Unauthorized" [ref=e1342] [cursor=pointer]
+        - button "403 Forbidden" [ref=e1343] [cursor=pointer]
+        - button "404 Not Found" [ref=e1344] [cursor=pointer]
+        - button "500 Server Error" [ref=e1345] [cursor=pointer]
+      - generic [ref=e1346]: Click an error code...
+  - generic [ref=e1348]:
+    - generic [ref=e1349]:
+      - generic [ref=e1350]: "15"
+      - heading "Flaky & Retry Elements" [level=2] [ref=e1351]
+      - paragraph [ref=e1352]: Elements that randomly appear, disappear, or change — great for practicing waitFor and retry logic.
+    - generic [ref=e1353]:
+      - generic [ref=e1354]:
+        - generic [ref=e1355]:
+          - heading [level=3] [ref=e1356]
+          - generic [ref=e1360]: Flaky
+        - paragraph [ref=e1361]: "This element randomly appears/disappears every 2 seconds:"
+        - generic [ref=e1362]: Now you see me!
+        - generic [ref=e1364]: Visible
+      - generic [ref=e1366]:
+        - generic [ref=e1367]:
+          - heading [level=3] [ref=e1368]
+          - generic [ref=e1372]: Wait
+        - paragraph [ref=e1373]: "Button appears after a random delay (1-5s):"
+        - button "Spawn Button" [ref=e1374] [cursor=pointer]
+      - generic [ref=e1376]:
+        - generic [ref=e1377]:
+          - heading [level=3] [ref=e1378]
+          - generic [ref=e1382]: Flaky
+        - paragraph [ref=e1383]: "Text changes every 3 seconds — wait for the right one:"
+        - generic [ref=e1384]: Almost there...
+        - paragraph [ref=e1385]: "Try waiting for: \"Success! Click now\""
+  - generic [ref=e1387]:
+    - generic [ref=e1388]:
+      - generic [ref=e1389]: "16"
+      - heading "Custom Date Picker" [level=2] [ref=e1390]
+      - paragraph [ref=e1391]: A custom calendar widget — more realistic than native date inputs.
+    - generic [ref=e1392]:
+      - generic [ref=e1393]:
+        - heading [level=3] [ref=e1395]
+        - generic [ref=e1399]:
+          - generic [ref=e1400]: Select a Date
+          - textbox "Click to select date..." [ref=e1402] [cursor=pointer]
+      - generic [ref=e1404]:
+        - heading [level=3] [ref=e1406]
+        - generic [ref=e1410]:
+          - generic [ref=e1411]: A date you can type or pick
+          - textbox "DD-MM-YYYY" [ref=e1413] [cursor=pointer]
+      - generic [ref=e1415]:
+        - heading [level=3] [ref=e1417]
+        - generic [ref=e1421]:
+          - generic [ref=e1422]: Choose a month and year
+          - textbox "Select month/year" [ref=e1424] [cursor=pointer]
+      - generic [ref=e1426]:
+        - heading [level=3] [ref=e1428]
+        - generic [ref=e1432]:
+          - generic [ref=e1433]:
+            - generic [ref=e1434]: Start Date
+            - textbox [ref=e1435]
+          - generic [ref=e1436]:
+            - generic [ref=e1437]: End Date
+            - textbox [ref=e1438]
+        - button "Calculate Duration" [ref=e1439] [cursor=pointer]
+  - generic "Advertisement" [ref=e1441]:
+    - iframe [ref=e1444]:
+      
+  - generic [ref=e1446]:
+    - generic [ref=e1447]:
+      - generic [ref=e1448]: "17"
+      - heading "Media Player" [level=2] [ref=e1449]
+      - paragraph [ref=e1450]: Audio and video controls for testing media interactions.
+    - generic [ref=e1451]:
+      - generic [ref=e1452]:
+        - heading [level=3] [ref=e1454]
+        - generic [ref=e1458]: Your browser does not support video.
+        - generic [ref=e1459]:
+          - button [ref=e1460] [cursor=pointer]
+          - button [ref=e1464] [cursor=pointer]
+          - button [ref=e1468] [cursor=pointer]
+          - button [ref=e1472] [cursor=pointer]
+          - slider [ref=e1476]: "1"
+          - generic [ref=e1477]: 0:00
+        - generic [ref=e1478]:
+          - generic [ref=e1479]: Seek
+          - slider [ref=e1480]: "0"
+      - generic [ref=e1481]:
+        - heading [level=3] [ref=e1483]
+        - generic [ref=e1492]:
+          - heading "Sample Audio Track" [level=4] [ref=e1493]
+          - paragraph [ref=e1494]: PlayLab Demo Audio
+        - generic [ref=e1495]:
+          - button [ref=e1496] [cursor=pointer]
+          - button [ref=e1500] [cursor=pointer]
+          - button [ref=e1504] [cursor=pointer]
+          - slider [ref=e1508]: "1"
+          - generic [ref=e1509]: 0:00
+        - slider [ref=e1510]: "0"
+  - generic [ref=e1512]:
+    - generic [ref=e1513]:
+      - generic [ref=e1514]: "18"
+      - heading "Accessibility (a11y)" [level=2] [ref=e1515]
+      - paragraph [ref=e1516]: Test ARIA attributes, keyboard navigation, focus management, and screen reader support.
+    - generic [ref=e1517]:
+      - generic [ref=e1518]:
+        - heading [level=3] [ref=e1520]
+        - paragraph [ref=e1524]: "Use Tab / Shift+Tab to navigate, Enter/Space to activate:"
+        - generic [ref=e1525]:
+          - button "First action button" [ref=e1526] [cursor=pointer]: Button 1
+          - button "Second action button" [ref=e1527] [cursor=pointer]: Button 2
+          - button "Third action button" [ref=e1528] [cursor=pointer]: Button 3
+        - separator [ref=e1530]
+        - heading "Skip Link" [level=4] [ref=e1531]
+        - link "Skip to content" [ref=e1532] [cursor=pointer]:
+          - /url: "#a11y-target"
+        - generic [ref=e1533]:
+          - paragraph [ref=e1534]: Scroll content area...
+          - paragraph [ref=e1535]: More content...
+          - paragraph [ref=e1536]: Even more content...
+          - generic [ref=e1537]: Target content reached!
+      - generic [ref=e1538]:
+        - heading [level=3] [ref=e1540]
+        - generic [ref=e1544]:
+          - searchbox "Type to search..." [ref=e1545]
+          - text: Search results update as you type
+        - status [ref=e1546]
+        - separator [ref=e1547]
+        - heading "ARIA Expanded / Controls" [level=4] [ref=e1548]
+        - button "Toggle Panel" [ref=e1549] [cursor=pointer]
+        - separator [ref=e1550]
+        - heading "Focus Trap (Modal-like)" [level=4] [ref=e1551]
+        - button "Open Focus Trap" [ref=e1552] [cursor=pointer]
+  - generic [ref=e1554]:
+    - generic [ref=e1555]:
+      - generic [ref=e1556]: "19"
+      - heading "Responsive Testing" [level=2] [ref=e1557]
+      - paragraph [ref=e1558]: Elements that change behavior and visibility based on viewport size.
+    - generic [ref=e1559]:
+      - heading [level=3] [ref=e1561]
+      - generic [ref=e1565]:
+        - generic [ref=e1566]:
+          - generic [ref=e1570]: Desktop Only
+          - generic [ref=e1571]: Visible at > 768px
+        - generic [ref=e1572]:
+          - generic [ref=e1576]: Always Visible
+          - generic [ref=e1577]: Visible at all sizes
+      - generic [ref=e1578]:
+        - paragraph [ref=e1579]:
+          - text: "Current viewport:"
+          - strong [ref=e1580]: 1280px
+          - text: ×
+          - strong [ref=e1581]: 720px
+        - paragraph [ref=e1582]: "Breakpoint: Desktop"
+      - separator [ref=e1583]
+      - heading "Responsive Layout Change" [level=4] [ref=e1584]
+      - paragraph [ref=e1585]: These cards stack on mobile but display side-by-side on desktop.
+      - generic [ref=e1586]:
+        - generic [ref=e1587]: Card A
+        - generic [ref=e1588]: Card B
+        - generic [ref=e1589]: Card C
+  - generic "Advertisement" [ref=e1590]:
+    - iframe [ref=e1593]:
+      
+  - generic [ref=e1595]:
+    - generic [ref=e1596]:
+      - generic [ref=e1597]: "20"
+      - heading "Protected Content" [level=2] [ref=e1598]
+      - paragraph [ref=e1599]: Content that requires authentication — practice testing auth guards.
+    - generic [ref=e1600]:
+      - heading [level=3] [ref=e1602]
+      - generic [ref=e1607]:
+        - heading "Authentication Required" [level=4] [ref=e1611]
+        - paragraph [ref=e1612]: You must be logged in to view this content.
+        - paragraph [ref=e1613]:
+          - text: "Login with:"
+          - code [ref=e1614]: test@playlab.com
+          - text: /
+          - code [ref=e1615]: Password123
+        - link "Login to Access" [ref=e1616] [cursor=pointer]:
+          - /url: login.html
+  - contentinfo [ref=e1617]:
+    - generic [ref=e1618]:
+      - generic [ref=e1619]:
+        - generic [ref=e1620]:
+          - heading [level=4] [ref=e1621]:
+            - img "PlayLab" [ref=e1622]
+            - text: PlayLab
+          - paragraph [ref=e1623]: The ultimate practice playground for test automation engineers.
+        - generic [ref=e1624]:
+          - heading "Quick Links" [level=4] [ref=e1625]
+          - list [ref=e1626]:
+            - listitem [ref=e1627]:
+              - link "Forms" [ref=e1628] [cursor=pointer]:
+                - /url: "#forms"
+            - listitem [ref=e1629]:
+              - link "Tables" [ref=e1630] [cursor=pointer]:
+                - /url: "#tables"
+            - listitem [ref=e1631]:
+              - link "Interactions" [ref=e1632] [cursor=pointer]:
+                - /url: "#interactions"
+            - listitem [ref=e1633]:
+              - link "Dynamic" [ref=e1634] [cursor=pointer]:
+                - /url: "#dynamic"
+        - generic [ref=e1635]:
+          - heading "More Sections" [level=4] [ref=e1636]
+          - list [ref=e1637]:
+            - listitem [ref=e1638]:
+              - link "Modals" [ref=e1639] [cursor=pointer]:
+                - /url: "#modals"
+            - listitem [ref=e1640]:
+              - link "Frames" [ref=e1641] [cursor=pointer]:
+                - /url: "#frames"
+            - listitem [ref=e1642]:
+              - link "Shadow DOM" [ref=e1643] [cursor=pointer]:
+                - /url: "#shadow"
+            - listitem [ref=e1644]:
+              - link "Advanced" [ref=e1645] [cursor=pointer]:
+                - /url: "#advanced"
+            - listitem [ref=e1646]:
+              - link "Wizard" [ref=e1647] [cursor=pointer]:
+                - /url: "#wizard"
+            - listitem [ref=e1648]:
+              - link "Carousel" [ref=e1649] [cursor=pointer]:
+                - /url: "#carousel"
+            - listitem [ref=e1650]:
+              - link "Network" [ref=e1651] [cursor=pointer]:
+                - /url: "#network"
+            - listitem [ref=e1652]:
+              - link "Flaky" [ref=e1653] [cursor=pointer]:
+                - /url: "#flaky"
+            - listitem [ref=e1654]:
+              - link "Date Picker" [ref=e1655] [cursor=pointer]:
+                - /url: "#datepicker"
+            - listitem [ref=e1656]:
+              - link "Media" [ref=e1657] [cursor=pointer]:
+                - /url: "#media"
+            - listitem [ref=e1658]:
+              - link "Accessibility" [ref=e1659] [cursor=pointer]:
+                - /url: "#a11y"
+            - listitem [ref=e1660]:
+              - link "Responsive" [ref=e1661] [cursor=pointer]:
+                - /url: "#responsive"
+        - generic [ref=e1662]:
+          - heading "Resources" [level=4] [ref=e1663]
+          - list [ref=e1664]:
+            - listitem [ref=e1665]:
+              - link "Playwright Docs" [ref=e1666] [cursor=pointer]:
+                - /url: https://playwright.dev
+            - listitem [ref=e1667]:
+              - link "Login Page" [ref=e1668] [cursor=pointer]:
+                - /url: login.html
+            - listitem [ref=e1669]:
+              - link "Privacy Policy" [ref=e1670] [cursor=pointer]:
+                - /url: privacy.html
+            - listitem [ref=e1671]:
+              - link "Terms of Service" [ref=e1672] [cursor=pointer]:
+                - /url: terms.html
+            - listitem [ref=e1673]:
+              - link "Contact" [ref=e1674] [cursor=pointer]:
+                - /url: contact.html
+          - heading "Connect" [level=4] [ref=e1675]
+          - link [ref=e1676] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/imsagarshaiva
+      - generic [ref=e1680]:
+        - paragraph [ref=e1681]:
+          - text: "© 2026 PlayLab. Built for learning Playwright automation.Site Owner:"
+          - strong [ref=e1682]: S Sagar
+        - paragraph [ref=e1683]:
+          - text: Made by
+          - strong [ref=e1684]: Claude Opus 4.8
+        - button "↑ Back to Top" [ref=e1685] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect} from '@playwright/test'
+  2  | test("shadow handling", async ({page})=>{
+  3  |     await page.goto("https://playwrightlab.github.io/")
+  4  | 
+  5  |     await page.getByText("Menu ▾").hover()
+> 6  |     await page.getByText("Shadow DOM", {exact:true}).first().click()
+     |                                                              ^ Error: locator.click: Test timeout of 120000ms exceeded.
+  7  | 
+  8  |     await page.getByRole("heading", {name:" Shadow DOM Elements"}).scrollIntoViewIfNeeded()
+  9  |     await page.locator("#shadowInput").fill("practice shawdow dom")
+  10 |     await page.locator("#shadowBtn").click()
+  11 |     await expect(page.locator("#shadowResult")).toContainText("practice shawdow dom")
+  12 | 
+  13 |     await page.locator("#nestedShadowTitle").isVisible()
+  14 |     await page.locator("#innerBtn").click()
+  15 |     await expect(page.locator("#innerResult")).toContainText("Inner button clicked")
+  16 | 
+  17 | })
+```

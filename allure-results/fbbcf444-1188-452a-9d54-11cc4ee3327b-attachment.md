@@ -1,0 +1,69 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: sauceloginpage.spec.ts >> saucelogin validation
+- Location: tests\sauceloginpage.spec.ts:14:1
+
+# Error details
+
+```
+Error: locator.fill: Test ended.
+Call log:
+  - waiting for getByLabel('Email Address')
+
+```
+
+# Test source
+
+```ts
+  1  | import type { Locator, Page } from "@playwright/test";
+  2  | 
+  3  | export class sauceloginpage{
+  4  | 
+  5  |     page :Page
+  6  |     signup : Locator
+  7  |     firstname : Locator
+  8  |     lastname :Locator
+  9  |     email : Locator
+  10 |     password : Locator
+  11 |     create : Locator
+  12 |     myaccount : Locator
+  13 | 
+  14 |     constructor(page:Page){
+  15 |         this.page = page
+  16 |         //this.signup = this.page.getByText("Sign up", {exact:true})
+  17 |         this.signup = this.page.locator("#customer_register_link").first()
+  18 |         this.firstname = this.page.locator('[name="customer[first_name]"]')
+  19 |         this.lastname = this.page.locator("#last_name").last()
+  20 |         this.email = this.page.getByLabel("Email Address").last()
+  21 |         this.password = this.page.getByLabel("Password")
+  22 |         this.create = this.page.locator('[value="Create"]')
+  23 |         this.myaccount = this.page.getByText("My Account",{exact:true})
+  24 |     }
+  25 | 
+  26 |     async lanchurl(url:string){
+  27 |         await this.page.goto(url)
+  28 |     }
+  29 | 
+  30 |     async signupbtn(){
+  31 |         await this.signup.click()
+  32 |     }
+  33 |     
+  34 |     async signupintoapp(firstname:string, lastname:string,email:string,password:string){
+  35 |         await this.firstname.fill(firstname)
+  36 |         await this.lastname.fill(lastname)
+> 37 |         await this.email.fill(email)
+     |                          ^ Error: locator.fill: Test ended.
+  38 |         await this.password.fill(password)
+  39 |         await this.create.click()
+  40 |     }
+  41 |    
+  42 |     
+  43 | 
+  44 | }
+```
